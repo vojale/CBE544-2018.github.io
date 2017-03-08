@@ -9,8 +9,6 @@ published: true
 1. [Introduction to ASE](../ASE/)
 2. [Getting Started](Getting_Started/)
 3. [Adsorption](Adsorption/)
-4. [Transition States](Transition_States/)
-5. [Error Estimation and Density of States](BEEF_DOS/)
 
 ____
 
@@ -65,13 +63,7 @@ You should see the following window:
 ASE GUI interface
 </center>
 
-To add an atom, select an existing atom and go to `Edit > Add atoms` or press `Ctrl+A`. You should then see the following window pop up:
-
-<center><img src="Images/gui-add.png" alt="add" style="width: 180px;"/><br>
-Adding an atom
-</center>
-
-After selecting OK, the atom will be placed on top of the atom you selected. If you did not select an atom, the new atom will be centered in the unit cell. If you want to move the atom, you can use `Tools > Move atoms` or `Ctrl+M`. The atom should have a green outline and you can use your arrow keys to move its position. You can simply hold down `Ctrl` to select multiple atoms.
+To add an atom, select an existing atom and go to `Edit > Add atoms` or press `Ctrl+A`. After selecting OK, the atom will be placed on top of the atom you selected. If you did not select an atom, the new atom will be centered in the unit cell. If you want to move the atom, you can use `Tools > Move atoms` or `Ctrl+M`. The atom should have a green outline and you can use your arrow keys to move its position. You can simply hold down `Ctrl` to select multiple atoms.
 
 <center><img src="Images/gui-move.png" alt="add" style="width: 400px;"/><br>
 Moving an atom

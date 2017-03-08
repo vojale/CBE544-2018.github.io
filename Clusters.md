@@ -45,16 +45,16 @@ echo $'\nHost *\n ForwardX11Timeout 1000000\n' >>~/.ssh/config
 Download and install:
 
 * [PuTTY](http://www.putty.org/)
-* [Kerberos](http://uit.stanford.edu/service/kerberos) (needed for Sherlock only)
+#* [Kerberos](http://uit.stanford.edu/service/kerberos) (needed for Sherlock only)
 * [Xming](http://sourceforge.net/projects/xming/) (Note: disable automatic installation of PuTTY with Xming. The above installer is a newer version)
 
 
 ### Linux (Debian-based, e.g. Ubuntu)
-From the terminal (needed for Sherlock only):
+From the terminal #(needed for Sherlock only):
 
-```bash
-sudo apt-get install krb5-user
-```
+#```bash
+##sudo apt-get install krb5-user
+#```
 
 ____
 

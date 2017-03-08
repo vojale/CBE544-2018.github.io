@@ -13,7 +13,7 @@ ____
 
 ## Logging Into the Computing Clusters
 
-Half of the class have been assigned computing accounts on Sherlock and the other half have been assigned accounts on CEES. Follow the instructions for using the one you have been assigned to and follow the tests to make sure everything is set up properly and functional.
+Once you account on Stampede has been activated. Follow the instructions and tests to make sure everything is set up properly and functional.
 
 ## Contents
 1. [Installation](#installation)
@@ -56,7 +56,7 @@ ____
 
 For the [**Stampede**](http://stampede.tacc.utexas.edu) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede).
 
-login with your XSEDE username and password.
+login with your XSEDE username and password (you will aslo be asked for Mulit-factor Authorization).
 
 Follow the instructions below for your system:
 
@@ -68,7 +68,7 @@ In a terminal:
 ssh -X username@stampede.tacc.utexas.edu
 ```
 
-### Windows
+### Windows 
 Launch Xming. You will always need to have this open in order to forward graphical windows from the external clusters.
 
 Start PuTTY, and:

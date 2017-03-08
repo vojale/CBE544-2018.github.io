@@ -53,7 +53,7 @@ Download an example and take a look:
 
 ```bash
 wget https://cbe544.github.io/ASE/Ti2C.traj
-ase-gui example.traj
+ase-gui Ti2C.traj
 ```
 
 

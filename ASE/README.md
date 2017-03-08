@@ -2,9 +2,10 @@
 layout: page
 mathjax: true
 permalink: /ASE/
+published: true
 ---
 
-# ASE Tutorials
+# ASE Tutorials --- adsasd asd 
 1. [Introduction to ASE](../ASE/)
 2. [Getting Started](Getting_Started/)
 3. [Adsorption](Adsorption/)

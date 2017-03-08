@@ -19,8 +19,6 @@ Half of the class have been assigned computing accounts on Sherlock and the othe
 1. [Installation](#installation)
 2. [Logging On](#logging)
 3. [First Time Logging On](#first-time)
-    1. [Sherlock](#first-time-sherlock)
-    2. [CEES](#first-time-cees)
 4. [Making Sure Everything Works](#testing)
 
 <a name='installation'></a>
@@ -104,44 +102,21 @@ ____
 For the **first login** only, run the following command:
 
 ```bash
-echo $'\nexport PATH=/home/vossj/suncat/bin:$PATH' >>~/.bashrc
-echo 'export LD_LIBRARY_PATH=/home/vossj/suncat/lib:/home/vossj/suncat/lib64:$LD_LIBRARY_PATH' >>~/.bashrc
+cp /home1/03672/tg829713/vojgroup/bash_script/bashrc_copy ~/.bashrc 
 source ~/.bashrc
 ```
 
-This will enable you to run SUNCAT specific software on the Sherlock cluster, including the ASE interface to Quantum ESPRESSO.
+This will enable you to run specific software on the Stampede cluster, including the ASE interface to Quantum ESPRESSO.
 
-There are two file partitions, the `home` and the `scratch` partition. Go ahead and make a symbolic link to the `scratch` partition using:
+There are two file partitions, the `home` and the `work` partition. Go ahead and make a symbolic link to the `work` partition using:
 
 ```bash
-ln -s $SCRATCH scratch
+ln -s $WORK work
 ```
 
-**Perform all your calculations from the scratch partition.**
+**Perform all your calculations from the `work` partition.**
 
 <a name='first-time-cees'></a>
-
-**CEES only**:
-
-If you access the CEES cluster from off-campus or wireless connection at Stanford Residences, you need to connect to Stanford’s VPN service before login to the cluster. The information regarding to Stanford’s VPN can be found [here](http://uit.stanford.edu/service/vpn).
-
-For the **first login** only, run the following command:
-
-```bash
-echo "setenv PATH /home/vossj/suncat/bin:${PATH}" >> ~/.tcshrc
-source ~/.tcshrc
-```
-
-Create a folder in `/data/cees/`, from where you will create additional folders for performing your calculations. Type the following to create a directory and a symbolic link from the home directory:
-
-```bash
-mkdir /data/cees/$USER
-ln -s /data/cees/$USER
-```
-
-**Make sure to perform all your work in this directory.**
-
-
 ____
 
 <a name='testing'></a>

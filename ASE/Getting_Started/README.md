@@ -99,7 +99,7 @@ An existing trajectory can be read in:
 
 ```python
 # read in the slab
-slab = io.read('Ti2C.traj')
+slab = read('Ti2C.traj')
 ```
 
 Then, the Quantum ESPRESSO calculator is set up. All parameters related to the electronic structure calculation are included here. The following example shows typical parameters that we use in the group for MXene calculations.
@@ -126,21 +126,21 @@ calc = espresso(pw=700,             #plane-wave cutoff
 
 ```
 
-Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, the energy calculation is ran, and the total energy of the system is output in the log file (defined in the `spede_esp.sub` file above).
+Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, the energy calculation is ran, and the total energy of the system is output in the log file (defined in the `spede_esp.sub` file above). 
 
-<a name='bulk'></a>
+To submit the job, use:
 
-### Bulk Metal ###
+```bash
+sbatch -J $PWD spede_esp.sub
 
-Head into the `Exercise_1_Getting_Started/Bulk/` folder.
-
-As a first example, we will be setting up a bulk fcc metal. You will typically do this when working with an entirely new system. 
+```
+The `-J $PWD` gives the name of the job as the current directory. Make sure this calculations runs correctly before proceeding.
 
 <a name='lattice-constant-determination'></a>
 
 #### Lattice Constant Determination ####
 
-Find the [`bulk_metal.py`](bulk_metal.py) script in the `lattice` folder. This script determines the optimum lattice parameter for bulk fcc Pt using the equation of state model. **Change Pt into the metal you have been assigned for the project** and also look up a reasonable initial guess for the lattice parameter, then replace `a = `. There's actually a table of calculated lattice parameters below, but one would typically start out with an experimentally measured value as a starting guess. For alloys, an A<sub>3</sub>B alloy will be generated. **Note:** we are only considering A<sub>3</sub>B alloys because there is a lot of published DFT data associated with them. This will make it easier for your analysis. Your cluster will just be A<sub>7</sub>B<sub>6</sub>, roughly half of each metal.
+Find the [`Lattice_Relax.py`](Lattice_Relax.py) script in the `lattice` folder. This script determines the optimum lattice parameter for Ti2C by changing the lattice constants and the fitting the data. *
 
 Submit the script by running (for Sherlock)
 
@@ -215,7 +215,7 @@ table#t01 th    {
 </style>
 <center>Lattice Parameters for Pure Metals (fcc unless otherwise stated)</center>
 <center>
-<table>
+<table> 
 <tr><th>Metal</th>
 <th>Lattice Constant (Å)</th></tr>
 <tr><td>Ag</td>

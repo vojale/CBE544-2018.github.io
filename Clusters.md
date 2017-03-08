@@ -45,96 +45,52 @@ echo $'\nHost *\n ForwardX11Timeout 1000000\n' >>~/.ssh/config
 Download and install:
 
 * [PuTTY](http://www.putty.org/)
-#* [Kerberos](http://uit.stanford.edu/service/kerberos) (needed for Sherlock only)
 * [Xming](http://sourceforge.net/projects/xming/) (Note: disable automatic installation of PuTTY with Xming. The above installer is a newer version)
 
 
 ### Linux (Debian-based, e.g. Ubuntu)
-From the terminal #(needed for Sherlock only):
-
-#```bash
-##sudo apt-get install krb5-user
-#```
-
+From the terminal
 ____
 
 <a name='logging'></a>
 
 ## Logging onto the Clusters
 
-For the [**Sherlock**](http://sherlock.stanford.edu) cluster, make sure to read through the login instructions [here](http://sherlock.stanford.edu/mediawiki/index.php/LogonCluster).
+For the [**Stampede**](http://stampede.tacc.utexas.edu) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede).
 
-For the [**CEES**](http://cees.stanford.edu) cluster, read through the login instructions [here](http://cees.stanford.edu/docs/GettingStarted2013.pdf).
-
-In **both** cases, login with your SUNetID and password.
+login with your XSEDE username and password.
 
 Follow the instructions below for your system:
 
 ### Mac OSX
 
-For **Sherlock** only, authenticate using Kerberos:
-
-```bash
-kinit sunetid@stanford.edu
-```
-
 Then,
 
 ```bash
-ssh -K -X sunetid@sherlock.stanford.edu
-```
-
-to log onto Sherlock, where ```sunetid``` is your Stanford SUNET ID. ```kinit``` does not need to be rerun unless the Kererbos ticket is expired. On Mac OSX you can type ```klist``` to check the status of the ticket.
-
-For **CEES**, 
-
-```bash
-ssh -X sunetid@cees-cluster.stanford.edu
+ssh -X username@stampede.tacc.utexas.edu
 ```
 
 ### Windows
-
-Open Kerberos and authenticate using your SUNetID and password. Alternatively, ppen a “Command Prompt” (open a new one, if you have just installed Kerberos) and run:
-
-```bash
-kinit -5 sunetid@stanford.edu
-```
-
-Next, launch Xming. You will always need to have this open in order to forward graphical windows from the external clusters.
+Launch Xming. You will always need to have this open in order to forward graphical windows from the external clusters.
 
 Start PuTTY, and:
 
-* “Session” → “Host Name” `sunetid@sherlock.stanford.edu` for **Sherlock** or `sunetid@cees-cluster.stanford.edu` for **CEES**.
+* “Session” → “Host Name” `username@stampede.tacc.utexas.edu` for **Stampede**
 * “Connection” → “SSH” → “X11” check “Enable X11 forwarding”
 * Back in “Session”, you can **save these settings for next time**.
 
-You can start putty several times, if you need several terminal windows; only one instance of kinit and Xming needed.
+You can start putty several times, if you need several terminal windows; only one instance of Xming needed.
 
 
 ### Linux ###
 
 In a terminal (Sherlock only):
 
-```bash
-kinit sunetid@stanford.edu
-```
-
-Then for **Sherlock**:
+Then for **Stampede**:
 
 ```bash
-ssh -X sunetid@sherlock.stanford.edu
+ssh -X username@stampede.tacc.utexas.edu
 ```
-
-Open new terminals to run ssh again if you need several terminals on sherlock;
-`kinit` only needs to be run once per boot (or as long as the Kerberos ticket remains valid). Type `klist` to check the ticket's status.
-
-For **CEES**:
-
-```bash
-ssh -X sunetid@cees-cluster.stanford.edu
-```
-
-
 ____
 
 <a name='first-time'></a>

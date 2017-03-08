@@ -54,7 +54,7 @@ As mentioned above, you can use the graphical user interface to view atomic stru
 Download an example and take a look:
 
 ```bash
-wget http://chemeng444.github.io/ASE/example.traj
+wget https://cbe544.github.io/ASE/Ti2C.traj
 ase-gui example.traj
 ```
 

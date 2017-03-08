@@ -62,8 +62,8 @@ Follow the instructions below for your system:
 
 ### Mac OSX
 
-Then,
-
+Open "Applications-> Utilities -> Terminal" or "Command+Space" to search Terminal using "spotlight search"
+In a terminal:
 ```bash
 ssh -X username@stampede.tacc.utexas.edu
 ```
@@ -82,10 +82,7 @@ You can start putty several times, if you need several terminal windows; only on
 
 ### Linux ###
 
-In a terminal (Sherlock only):
-
-Then for **Stampede**:
-
+In a terminal:
 ```bash
 ssh -X username@stampede.tacc.utexas.edu
 ```
@@ -94,10 +91,6 @@ ____
 <a name='first-time'></a>
 
 ### First Time Logging in ###
-
-<a name='first-time-sherlock'></a>
-
-**Sherlock only**:
 
 For the **first login** only, run the following command:
 

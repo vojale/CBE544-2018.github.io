@@ -200,26 +200,23 @@ Check the status of your jobs. You will get something like the following:
 
 ____
 
+
+Shows more useful details about the job, including the working directory of the script. 
 ```bash
 squeue -u $USER -o '%.7i %.9P %.8j %.8u %.2t %.10M %.6D %R %Z'
 ```
-Shows more useful details about the job, including the working directory of the script. For example
+You will get something like the following: 
 
 ```
-JOBID PARTITION     NAME     USER ST       TIME  NODES WORK_DIR
-1948301      slac /scratch  ctsai89  R   23:24:47      8 /scratch/users/ctsai89/TS_CH3_Au111/N_NEB
-1948505      slac /home/ct  ctsai89  R   19:57:06      1 /scratch/users/ctsai89/Class_remaining/Ag111/fbl
-1948506      slac /home/ct  ctsai89  R   19:57:06      1 /scratch/users/ctsai89/Class_remaining/Ag211/fbl
-1948302      slac /scratch  ctsai89  R   23:24:11      7 /scratch/users/ctsai89/TS_CH3_Au111/B_NEB
+JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON) WORK_DIR
+8345154 developme     test tg829713  R       1:12      1 c558-104 /work/03672/tg829713/scaling/QE/test
 ```
-
 ____
+To delete your job. You can get the job ID from ```sq``` and use scancel to delete it. 
 
 ```bash
 scancel <job_ID>
 ```
-Delete your job. You can get the job ID from ```squeue```
-
 ____
 
 

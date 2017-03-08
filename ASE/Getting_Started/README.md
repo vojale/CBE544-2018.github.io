@@ -8,14 +8,12 @@ permalink: /ASE/Getting_Started/
 1. [Introduction to ASE](../)
 2. [Getting Started](../Getting_Started/)
 3. [Adsorption](../Adsorption/)
-4. [Transition States](../Transition_States/)
-5. [Error Estimation and Density of States](../BEEF_DOS/)
 
 ____
 
 ## Getting Started ##
 
-In the first exercise, we will be looking at bulk metals and how to determine lattice constants, then we will be setting up metal surfaces and metal clusters. The example scripts use Pt by default. You should change this to the system you have been assigned for the project so you can start making progress.
+In the first exercise, we will be looking at MXenes and how to determine lattice constants, then we will be setting up adsorbates. For homework 5, you will all be doing the same system (Ti2C). For the final project, you will use the same structure but with different atoms (e.g., Mo2N instead of Ti2C).
 
 ## Contents ##
 
@@ -32,11 +30,11 @@ In the first exercise, we will be looking at bulk metals and how to determine la
 
 Obtain the required files by running:
 
-on Sherlock:
+on Stampede:
 
 ```bash
 cd $SCRATCH
-wget http://chemeng444.github.io/ASE/Getting_Started/exercise_1_sherlock.tar
+wget http://CBE544.github.io/ASE/Getting_Started/exercise_1_sherlock.tar
 tar -xvf exercise_1_sherlock.tar
 ```
 
@@ -123,16 +121,15 @@ Next, we import all the relevant ASE modules in for this calculation
 from ase import *
 from ase.lattice.surface import *
 from ase.optimize import *
-from ase.constraints import *
 from espresso import espresso
 ```
 
-The asterisks `*` indicates that all methods and classes should be imported. You can also specify the ones you need. `from ase import *` imports all the basic functionality in ase, `from ase.lattice.surface import *` import methods and classes related to solid surfaces, `from ase.optimize import *` imports the optimization methods, `from ase.constraints import *` imports the constraint methods, and most importantly `from espresso import espresso` import the Quantum ESPRESSO calculator for the ASE interface.
+The asterisks `*` indicates that all methods and classes should be imported. You can also specify the ones you need. `from ase import *` imports all the basic functionality in ase, `from ase.lattice.surface import *` import methods and classes related to solid surfaces, `from ase.optimize import *` imports the optimization methods, and most importantly `from espresso import espresso` import the Quantum ESPRESSO calculator for the ASE interface.
 
 We define a string
 
 ```python
-name = 'Pt111'
+name = 'Ti2C'
 ```
 which we can easily modify and use for naming output files.
 
@@ -140,21 +137,21 @@ An existing trajectory can be read in:
 
 ```python
 # read in the slab
-slab = io.read('slab.traj')
+slab = io.read('Ti2C.traj')
 ```
 
 
-Then, the Quantum ESPRESSO calculator is set up. All parameters related to the electronic structure calculation are included here. The following example shows typical parameters that we use in the group for metal calculations. Typically, the number of k-points is determined using 24 Å per lattice vector for transition metals.
+Then, the Quantum ESPRESSO calculator is set up. All parameters related to the electronic structure calculation are included here. The following example shows typical parameters that we use in the group for MXene calculations.
 
 ```python
 #espresso calculator setup
-calc = espresso(pw=500,           #plane-wave cutoff
-                dw=5000,          #density cutoff
+calc = espresso(pw=700,           #plane-wave cutoff
+                dw=7000,          #density cutoff
                 xc='BEEF-vdW',    #exchange-correlation functional
-                kpts=(4,4,1),     #k-point sampling, no dispersion to be sampled along z
+                kpts=(8,8,1),     #k-point sampling, no dispersion to be sampled along z
                 nbands=-10,       #10 extra bands besides the bands needed to hold the valence electrons
                 sigma=0.1,
-                convergence= {'energy':1e-5,  #convergence parameters
+                convergence= {'energy':1e-6,  #convergence parameters
                               'mixing':0.1,
                               'nmix':10,
                               'mix':4,
@@ -162,15 +159,6 @@ calc = espresso(pw=500,           #plane-wave cutoff
                               'diag':'david'
                              },
                 outdir='calcdir') #output directory for Quantum Espresso files
-```
-
-Then, atomic constraints are set. Since there are only a finite number of layers in the slab, the lowest layers are fixed to emulate the bulk. 
-
-```python
-mask = [atom.z < 10 for atom in slab]  #atoms in the structure to be fixed
-fixatoms = FixAtoms(mask=mask)
-slab.set_constraint(fixatoms)           #fix everything but the top layer atoms
-slab.rattle()                           #define random displacements to the atomic positions before optimization
 ```
 
 Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, and the optimizer is defined. 

@@ -59,84 +59,41 @@ source  /home1/03672/tg829713/vojgroup/bash_script/group_bash_env
 
 Save the file, logout, and login again. This ensures that you are using the correct python instalaltion with all the proper modules to run the rest of these exercises. You only need to do this step once.
 
-Let's look at how a typical ASE script is written. Open the [`run_surf.py`](run_surf.py) script in the `Surface` folder. We will be showing the Sherlock versions of the script for brevity, but the CEES versions are analogous.
+There are two files that are necessary to run jobs on the Stampede cluster. The first is `spede_esp.sub`; this is the file that tells the scheduler how much time the job is allowed, how many processors it requires, and other pertinent information. First, notice the comments in the beginning. These lines will be ignored by Python, but will be read by the job submission system. These include information such as how much time to allocate, the number of nodes required, what the names of the output and error files are, what the name of the job should be, and what your email is. 
 
 ```bash
-vi run_surf.py
-```
+#!/bin/bash
 
-The first line,
+#SBATCH -J test        # Job Name
+#SBATCH -A TG-ENG160034 #Kurt's allocation: TG-ENG160034, Ting's allocation TG_CHE160077
+#SBATCH -o ll_out    # Output and error file name
+#SBATCH -e ll_err    # Output and error file name
+#SBATCH -n 16          # Total number of mpi tasks requested
+#SBATCH -p normal # which queue to run in
+#SBATCH -t 03:00:00     # Run time (hh:mm:ss)
+#SBATCH --mail-user=youremail@whatever.com # Make sure to change this!!!!
+#SBATCH --mail-type=end # Emails you at the end of the job
+
+```
+The next five lines tell the job exactly what to execute; do not change these lines.
+
+Finally, the last line 
+
+```bash
+python run.py
+
+```
+picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
+
+
+Let's look at how a typical ASE script is written. Open the [`Energy.py`](energy.py) script. We import all the relevant ASE modules in for this calculation
 
 ```python
-#!/usr/bin/env /home/vossj/suncat/bin/python
-```
-
-will ensure that the version of Python that is being used is the one that has all the software from SUNCAT installed.
-
-Next, notice the comments in the beginning. These lines will be ignored by Python, but will be read by the job submission system. These include information such as how much time to allocate, the number of nodes required, what the names of the output and error files are, what the name of the job should be, and what your email is. Most of the settings will be the same regardless of the job you submit. You will mostly just be changing the amount of allocated time and the number of nodes, for jobs that require parallelization (not required for this project).
-
-```python
-#above line selects special python interpreter needed to run espresso
-#SBATCH -p iric 
-#set a job name
-#SBATCH --job-name=myjob
-
-#a file for job output, you can check job progress
-#SBATCH --output=myjob.out
-
-# a file for errors from the job
-#SBATCH --error=myjob.err
-
-#time you think you need. The max is 2880:00
-#SBATCH --time=100:00
-
-#number of nodes you are requesting
-#SBATCH --nodes=1
-
-#SBATCH --mem-per-cpu=4000
-
-#get emailed about job BEGIN, END, and FAIL
-#SBATCH --mail-type=ALL
-
-#who to send email to; please change to your email
-#SBATCH  --mail-user=SUNETID@stanford.edu
-
-#task to run per node; each node has 16 cores
-#SBATCH --ntasks-per-node=16
-```
-
-To change the allocated time for the jobs, modify:
-
-Sherlock (MM:SS):
-
-```python
-#SBATCH --time=1200:00
-```
-
-CEES (HH:MM:SS):
-
-```python
-#PBS -l walltime=20:00:00
-```
-
-
-Next, we import all the relevant ASE modules in for this calculation
-
-```python
-from ase import *
-from ase.lattice.surface import *
-from ase.optimize import *
 from espresso import espresso
+from ase.io import read, write
 ```
 
-The asterisks `*` indicates that all methods and classes should be imported. You can also specify the ones you need. `from ase import *` imports all the basic functionality in ase, `from ase.lattice.surface import *` import methods and classes related to solid surfaces, `from ase.optimize import *` imports the optimization methods, and most importantly `from espresso import espresso` import the Quantum ESPRESSO calculator for the ASE interface.
-
-We define a string
-
-```python
-name = 'Ti2C'
-```
-which we can easily modify and use for naming output files.
+`from espresso import espresso` imports the Quantum ESPRESSO calculator for the ASE interface, and `from ase.io import read, write` imports the read and write commands for trajectory files.
 
 An existing trajectory can be read in:
 
@@ -145,64 +102,31 @@ An existing trajectory can be read in:
 slab = io.read('Ti2C.traj')
 ```
 
-
 Then, the Quantum ESPRESSO calculator is set up. All parameters related to the electronic structure calculation are included here. The following example shows typical parameters that we use in the group for MXene calculations.
 
 ```python
-#espresso calculator setup
-calc = espresso(pw=700,           #plane-wave cutoff
-                dw=7000,          #density cutoff
-                xc='BEEF-vdW',    #exchange-correlation functional
-                kpts=(8,8,1),     #k-point sampling, no dispersion to be sampled along z
-                nbands=-10,       #10 extra bands besides the bands needed to hold the valence electrons
+calc = espresso(pw=700,             #plane-wave cutoff
+                dw=7000,                    #density cutoff
+                xc='BEEF-vdW',          #exchange-correlation functional
+                kpts=(8,8,1),   #k-point sampling;
+                nbands=-20,             #20 extra bands besides the bands needed to hold
+                #the valence electrons
                 sigma=0.1,
-                convergence= {'energy':1e-6,  #convergence parameters
-                              'mixing':0.1,
-                              'nmix':10,
-                              'mix':4,
-                              'maxsteps':500,
-                              'diag':'david'
-                             },
-                outdir='calcdir') #output directory for Quantum Espresso files
+                convergence= {'energy':1e-6,
+                'mixing':0.1,
+                'nmix':10,
+                'mix':4,
+                'maxsteps':500,
+                'diag':'david'
+                },	#convergence parameters
+                output={'removesave':True},
+                dipole={'status':False}, #dipole correction to account for periodicity in z
+                spinpol=False,
+                outdir='calcdir')	#output directory for Quantum Espresso files
+
 ```
 
-Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, and the optimizer is defined. 
-
-To perform structural optimizations, an optimizer needs to be defined. We will be using the BFGS Line Search, which is implemented in `QuasiNewton`. For more details about optimizations in ASE, look at [this page](https://wiki.fysik.dtu.dk/ase/ase/optimize.html). `QuasiNewton()` is an object for the [structural optimization](https://wiki.fysik.dtu.dk/ase/ase/optimize.html), which takes an Atoms object as an input. A convergence criteria is set and `qn.run()` initiates the optimization.
-
-```python
-slab.set_calculator(calc)                       #connect espresso to slab
-qn = QuasiNewton(slab, trajectory=name+'.traj', logfile=name+'.log') #relax slab
-qn.run(fmax=0.05)                               #until max force<=0.05 eV/AA
-```
-
-The `logfile=` argument is optional. If it's not specified, then the output will be written to the system output, e.g. `myjob.out`. If it is specified, then the output for the optimization will be written to `name+'.log'`, e.g. `Pt111.log`. You should see the following results:
-
-```bash
-BFGSLineSearch:   0[  0]  12:50:46   -28144.460970       1.7496
-BFGSLineSearch:   1[  1]  12:59:45   -28145.528706       0.4792
-BFGSLineSearch:   2[  2]  13:07:35   -28145.571393       0.3625
-BFGSLineSearch:   3[  3]  13:14:49   -28145.600615       0.1408
-BFGSLineSearch:   4[  4]  13:21:30   -28145.608312       0.0994
-BFGSLineSearch:   5[  5]  13:27:02   -28145.610934       0.0540
-BFGSLineSearch:   6[  6]  13:31:28   -28145.611948       0.0245
-```
-
-The column names for the results are:
-
-```bash
-optimizer         step    time       total energy (eV)   forces (eV/Å)
-```
-
-The trajectory for all optimization steps are stored in `name+'.traj'`, so if `name='output'`, then it will be stored in `output.traj`. You can read the output trajectory using `ase-gui output.traj` and view all steps. The final energy is also stored in the `.traj` file and can be retrieved by reading in the `.traj` file. Using Python in interactive mode (i.e., by running `python`):
-
-```python
->>> from ase.io import read
->>> atoms = read('output.traj')
->>> atoms.get_potential_energy()
--28436.147150825487
-```
-
+Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, the energy calculation is ran, and the total energy of the system is output in the log file (defined in the `spede_esp.sub` file above).
 
 <a name='bulk'></a>
 

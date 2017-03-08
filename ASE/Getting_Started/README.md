@@ -38,14 +38,6 @@ wget http://CBE544.github.io/ASE/Getting_Started/exercise_1_sherlock.tar
 tar -xvf exercise_1_sherlock.tar
 ```
 
-or on CEES:
-
-```bash
-cd ~/$USER
-wget http://chemeng444.github.io/ASE/Getting_Started/exercise_1_cees.tar
-tar -xvf exercise_1_cees.tar
-```
-
 This should create a folder called `Exercise_1_Getting_Started/` containing subfolders with all the starter scripts you will need. By default, The output for your calculations will be written into the folder from where you submitted the script. To perform new calculations, you will generally be copying the scripts from these tutorials into new folders, modifying them, and submitting them.
 
 <a name='a-typical-ase-script'></a>
@@ -53,6 +45,19 @@ This should create a folder called `Exercise_1_Getting_Started/` containing subf
 ### A Typical ASE Script ###
 
 ASE scripts can be run directly in the terminal (in the login node) or submitting to external nodes. Generally, you will be submitting jobs to external nodes and only small scripts will be run on the login node. By default, all output from any submitted script will be written *from the directory where the submission command was executed*, so make sure you are inside the calculation folder before running the submission command.
+
+VERY IMPORTANT! The first time you login to Stampede, edit your bash profile:
+
+```bash
+nano ~/.bash_profile
+```
+Add the following to the end of the file:
+
+```bash
+source  /home1/03672/tg829713/vojgroup/bash_script/group_bash_env
+```
+
+Save the file, logout, and login again. This ensures that you are using the correct python instalaltion with all the proper modules to run the rest of these exercises. You only need to do this step once.
 
 Let's look at how a typical ASE script is written. Open the [`run_surf.py`](run_surf.py) script in the `Surface` folder. We will be showing the Sherlock versions of the script for brevity, but the CEES versions are analogous.
 

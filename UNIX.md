@@ -167,13 +167,12 @@ Any number of characters. Example: ```ls *.traj``` will list all ```.traj``` fil
 <a name='text-editors'></a>
 
 ## Text Editors
-There are several text editors available. Popular ones include ```vim``` and ```nano```. Most people at SUNCAT use ```vim```. To open a file, use ```vim file.txt``` to open a file named ```file.txt```.
-
+There are several text editors available. Popular ones include ```vim``` and ```nano```. 
 
 <a name='submitting-jobs'></a>
 
 ## Submitting Jobs
-These instructions are specific to the **Sherlock** cluster. Instructions for the **CEES** cluster below.
+These instructions are specific to the **Stampede** cluster. 
 
 ```bash
 sbatch <script_file>
@@ -189,31 +188,20 @@ sbatch --job-name=$PWD <script_file>
 I recommend specifying `--job-name=$PWD` so it will set the current directory as the job name. This way you will have this information in the email.
 
 ```bash
-squeue
+sq
 ```
 
 Check the status of your jobs. You will get something like the following: 
 
 ```
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-           1930211    normal slurm_jo   gunhan CG    2:00:20      1 sh-5-25
-           1819909    normal feat5_st   cbohon PD       0:00      1 (Dependency)
-           1819916    normal feat5_st   cbohon PD       0:00      1 (Dependency)
-        1787348_10    normal      ida  reaganc PD       0:00     32 (Resources)
-        1787348_11    normal      ida  reaganc PD       0:00     32 (Resources)
-           1904877    normal cftr_ref  jadeshi PD       0:00      1 (QOSMaxCpusPerUserLimit)
+           JOBID   PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           8345154 development     test tg829713  R       0:17      1 c558-104
 ```
-____
-
-```bash
-squeue -u your_SUNETID
-```
-This will list your jobs.
 
 ____
 
 ```bash
-squeue -u your_SUNETID -o '%.7i %.9P %.8j %.8u %.2t %.10M %.6D %R %Z'
+squeue -u $USER -o '%.7i %.9P %.8j %.8u %.2t %.10M %.6D %R %Z'
 ```
 Shows more useful details about the job, including the working directory of the script. For example
 
@@ -233,19 +221,5 @@ scancel <job_ID>
 Delete your job. You can get the job ID from ```squeue```
 
 ____
-
-If you are using the **CEES** cluster, the command for submitting a job is
-
-```csh
-qsub <script_file>
-```
-
-where `<script_file>` is the name of your script (e.g. `opt.py`).
-
-```bash
-qstat
-```
-
-This will display details about the job. Once the job has finished, this detail won't be available.
 
 

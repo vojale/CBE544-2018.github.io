@@ -54,7 +54,7 @@ ____
 
 ## Logging onto the Clusters
 
-For the [**Stampede**](http://stampede.tacc.utexas.edu) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede).
+For the [**Stampede**](https://www.tacc.utexas.edu/stampede/) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede).
 
 login with your XSEDE username and password (you will aslo be asked for Mulit-factor Authorization).
 

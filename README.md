@@ -1,2 +1,2 @@
-# chemeng444.github.io
-Web page for the CHEMENG444/ENERGY256 course project.
+# CBE544.github.io
+Web page for the CBE544 course project.

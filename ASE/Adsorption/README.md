@@ -8,41 +8,12 @@ permalink: /ASE/Adsorption/
 1. [Introduction to ASE](../)
 2. [Getting Started](../Getting_Started/)
 3. [Adsorption](../Adsorption/)
-4. [Transition States](../Transition_States/)
-5. [Error Estimation and Density of States](../BEEF_DOS/)
 
 ____
 
-## Adsorption on Surfaces ##
+## Adsorption on MXenes ##
 
-In the second exercise, you will be calculating the dissociative adsorption of N<sub>2</sub> onto the your cluster and (111) surface. This will set you up for calculating the transition state in the third exercise. We will also calculate all the intermediates in the ammonia synthesis pathway (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*)
-
-**Update (2016/02/20)**: Many of the clusters involving alloys or non-fcc metals underwent significant reconstruction during the relaxation. This leads to a highly asymmetric structure with many unique sites. These are completely new systems, so we don't know their behavior *a priori*. Exploring all the unique sites would take much more time, so we have prepared all clusters with a fixed cuboctahedral shape. The lattice constants have been optimized with respect to this fixed structure. **_If_ your structure underwent significant reconstruction or distortion, you should use this for the adsorption and transition state calculations.** Just remember to keep the metal atoms fixed in all cases, or else the system will become distorted again. Look for the `#### FOR FIXED CLUSTERS ONLY ####` comment in the scripts and make sure the lines following that are uncommented.
-
-You may download the fixed structures using:
-
-```bash
-wget http://chemeng444.github.io/Fixed_Lattice_Clusters/METALS.traj
-```
-
-where `METALS` needs to be replaced with your system (*e.g.* `PtRe`).
-
-**Update (2016/02/23)**: Even if your cluster did not distort in the previous part, you may find that they distort once adsorbates are added on. In this case you can also use the fixed structures above. If you want, you can also study the effect of relaxing the metal atoms that are directly in contact with the adsorbates (instructions in the updated [`opt.py`](opt.py) script). Remember that the exercises are only the minimum requirements for the project. A comparison between geometric and electronic effects is something that you can explore.
-
-**Update (2016/02/25)**: If you accidentally relaxed your cluster or if you find that your cluster distorts and after some optimization steps, here is a script to help you swap out the cluster with the fixed one, while keeping the adsorbate in the same place:
-
-```bash
-wget https://chemeng444.github.io/ASE/Adsorption/replace_with_fixed_cluster.py
-```
-
-to use this, run
-
-```bash
-python replace_with_fixed_cluster.py file.traj
-```
-
-and it will replace the cluster in `file.traj` with its fixed version. 
-
+In the second exercise, you will be calculating the adsorption of N atoms on the Ti<sub>2</sub>C surface.
 
 ## Contents
 1. [Gaseous Molecules](#gaseous-molecules)
@@ -50,61 +21,28 @@ and it will replace the cluster in `file.traj` with its fixed version.
 3. [Remaining Reaction Intermediates](#reaction-intermediates)
 4. [Batch Submission](#batch-submitting)
 
-### Required Files ###
-
-Obtain the required files by running:
-
-on Sherlock:
-
-```bash
-cd $SCRATCH
-wget http://chemeng444.github.io/ASE/Adsorption/exercise_2_sherlock.tar
-tar -xvf exercise_2_sherlock.tar
-```
-
-or on CEES:
-
-```bash
-cd ~/$USER
-wget http://chemeng444.github.io/ASE/Adsorption/exercise_2_cees.tar
-tar -xvf exercise_2_cees.tar
-```
-
-This will create a folder called `Exercise_2_Adsorption`.
-
 <a name='gaseous-molecules'></a>
 
 ### Gaseous Molecules ###
 
-In this exercise you will be calculating the dissociative adsorption of N<sub>2</sub> on your extended surface and your M<sub>13</sub> surface from the [previous exercise](../Getting_Started/). The dissociative adsorption energy is defined as:
+In this exercise you will be calculating the dissociative adsorption of N<sub>2</sub> on your extended surface and your Ti<sub>2</sub>C surface from the [previous exercise](../Getting_Started/). The dissociative adsorption energy is defined as:
 <div>
 
 $$
-\Delta E_\mathrm{ads} = E_\mathrm{surface + 2N*}  - E_\mathrm{surface} - E_\mathrm{N_2}
+\Delta E_\mathrm{ads} = E_\mathrm{surface + N*}  - E_\mathrm{surface} - E_\mathrm{N}
 $$
 
 </div>
 
-where N\* refers to adsorbed N. We have *E*<sub>surface</sub> from the previous exercise, so we will need to calculate both *E*<sub>surface + 2N\*</sub> and *E*<sub>N<sub>2</sub></sub> in this exercise.
-
-In the `N2_gas` subfolder, find the [`run_N2.py`](run_N2.py) script. This is a typical script for calculating gas phase species: the optimized geometry is determined, then the electronic energy, as well as the vibrational modes are computed and used to determine the free energy. Run the script and check that the vibrational modes are reasonable. Ideally, one large vibrational frequency corresponding to the N-N stretching should be observed.
-
-**Update (2016/02/20):** There was a typo in `run_N2.py` where the vacuum was mistakenly doubled in all directions. Either download the script again or change line 17 to:
-
-```python 
-atoms.center(10.0)
-```
-
+where N\* refers to adsorbed N. We have *E*<sub>surface</sub> from the previous exercise, so we will need to calculate *E*<sub>surface + 2N\*</sub>. The energy of E_N is -278.275 eV (we will talk about where this energy came from in the final project).
 
 <a name='adsorption-sites'></a>
 
 ### Adsorption Sites ###
 
-Take a look [here](http://chemeng444.github.io/ASE/#ase-gui) if you need a reminder on how to add atoms using `ase-gui`. We will describe how to add atoms within the ASE script below.
+Take a look [here](http://CBE544.github.io/ASE/#ase-gui) if you need a reminder on how to add atoms using `ase-gui`. We will describe how to add atoms within the ASE script below.
 
-Enter the `Adsorption` subfolder.
-
-There are four possible adsorption sites on fcc (111) surfaces that an adsorbate can bind to: the fcc, hcp, ontop, and bridge sites. For a bcc (110), there are three sites: hollow, ontop, and bridge. For the M<sub>13</sub> clusters, there are four sites: 1-fold, 2-fold, 3-fold, and 4-fold coordinated sites. These are illustrated below:
+There are four possible adsorption sites on MXene surfaces that an adsorbate can bind to: the fcc, hcp, ontop, and bridge sites. These are illustrated below:
 <style>
 table {
     width:100%;
@@ -171,10 +109,7 @@ table#t01 th    {
 </tr>
 </table>
 </center>
-
-If you are working with an alloy system, it is possible that the structure has distorted significantly. In that case, just identify the unique adsorption sites for your system.
-
-In the [`setup_ads.py`](setup_ads.py) script, an optimized structure is read, and then the adsorbate atoms are added manually. This script can be executed in the login node using `python setup_ads.py`. The `add_adsorbate()` function is used to add adsorbates:
+Find the [`Relax.py`](Relax.py) script from the downloaded tar file in the last exercise. An optimized structure is read, and then the adsorbate atoms are added manually. This script can be executed in the login node using `python setup_ads.py`. The `add_adsorbate()` function is used to add adsorbates:
 
 ```python
 add_adsorbate(slab, 'N', 1.5, (3, 1.7))

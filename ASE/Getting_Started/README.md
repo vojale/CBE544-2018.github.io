@@ -135,7 +135,7 @@ To submit the job, use:
 sbatch -J $PWD spede_esp.sub
 
 ```
-The `-J $PWD` gives the name of the job as the current directory. Make sure this calculations runs correctly before proceeding.
+The `-J $PWD` gives the name of the job as the current directory. Make sure this calculations runs correctly before proceeding. You should get a total energy of -3353.960 eV.
 
 <a name='lattice-constant-determination'></a>
 
@@ -150,7 +150,15 @@ sbatch --job-name=$PWD spede_esp.sub
 ```
 Here, `--job-name=$PWD` sets the current working directory as the job name. 
 
-The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function.
+The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function. Then, use calculus to find the minimum energy, and thus the true lattice constant.
+
+**HW 5:** Report the true lattice constant.
+
+The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or strain). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
+
+$B=2S_{0}\frac{d^{2}E}{dS^{2}}$
+
+**HW 5:** Report the two-dimensional bulk modulus of Ti2C.
 
 <a name='convergence-with-k-points'></a>
 

@@ -156,66 +156,21 @@ The output states the energy with respect to the given lattice constant. Take th
 
 The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or strain). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
 
-$B=2S_{0}\frac{d^{2}E}{dS^{2}}$
+$B=S_{0}\frac{d^{2}E}{dS^{2}}$
+
+where S is the surface area of the sheet (a variable) and S_0 is the true surface area. Note that in this case we are fitting the surface area S, _not_ the lattice constant! The surface area of the MXenes is given by:
+
+$S=\frac{\sqrt{3}}{2}a^{2}$
 
 **HW 5:** Report the two-dimensional bulk modulus of Ti2C.
 
 <a name='convergence-with-k-points'></a>
 
 #### Convergence with k-Points ####
-Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Submit the [`run_sp.py`](run_sp.py) script in the kpts folder using the lattice parameter obtained from the previous section.
+Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Submit the [`kpoints.py`](kpoints.py) script using the lattice parameter obtained from the previous section.
 
-Sherlock:
+Try using k = (2,2,1), (4,4,1), (6,6,1) and (8,8,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
 
-```bash
-sbatch --job-name=$PWD run_sp.py
-```
-
-CEES:
-
-```bash
-qsub run_sp.py
-```
-
-**Requirement**: Try using k = 6, 10, 14, and 18 in all three directions (i.e., k×k×k). and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. Use the optimal k-point sampling to re-run the lattice optimization script (`bulk_metal.py`) again and check if the results are consistent. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system.
-
-<a name='surfaces'></a>
-
-### Metal Surfaces ###
-
-Head into the `Exercise_1_Getting_Started/Surface/` folder.
-
-Next we will set up various common surface terminations of a metal using the `ase.lattice.surface` module and optimize the geometry. We will focus on the 111 surface for fcc metals (110 for bcc). The [`setup_surf.py`](setup_surf.py) file sets up the (111) surface for Pt, with specification of the size and lattice parameter. **Edit the file and replace Pt with your metal and the lattice constant with your optimized result from running **`bulk_metal.py`. You can execute this directly from the terminal and view the results, e.g.:
-
-```bash
-$ python setup_surf.py
-$ ase-gui slab.traj
-```
-
-This will generate slab.traj and the second command opens the file with the ASE gui visualizer. You should see something looking like this:
-
-<center><img src="Images/Pt-slab.png" alt="Pt111" style="width: 250px;"/>
-<img src="Images/Mo-slab.png" alt="Mo110" style="width: 250px;"/>
-<br>Pt(111) and Mo(110) slabs</center>
-
-[`run_surf.py`](run_surf.py) is a script that sets up the Quantum ESPRESSO calculator and performs the geometry optimization with respect to energy. This must be submitted to an external queue and should not be run directly in the login node. Make sure that you have run `setup_surf.py` to generate your `slab.traj` file, then submit the optimization script using:
-
-```bash
-sbatch --job-name=$PWD run_surf.py
-```
-
-in Sherlock, where again `--job-name=$PWD` will use the present working directory for the the SLURM (the job submission system) job name. Or,
-
-```bash
-qsub run_surf.py
-```
-
-in CEES.
-
-Try changing the number of k-points in the x and y-direction (i.e., k×k×1) using k = 4, 6, and 8. There are 7 Å of vacuum in the z-direction so 1 k-point is sufficient.
-
-**<font color="red">Requirement:</font>** Plot the change in the total slab energy as a function of the different k-points (kxkx1 where k = {4, 6, 8}). Do this by changing the keyword in the `run_surf.py` script, e.g. `kpts=(2,2,1)`. How many k-points are sufficient?
-
-
+**HW 5:** Show the k-point convergence plot, your pick for the k-points, and your rationale.
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

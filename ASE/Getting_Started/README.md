@@ -226,64 +226,7 @@ $ ase-gui cluster.traj
 
 Next the [`run_cluster.py`](run_cluster.py) script will perform the optimization. **Note that you will probably need to allocate 10-20 hours for this calculation to finish.** Don't be alarmed if it is taking longer than all the other calculations. If you didn't allocate enough time, you can always [restart the calculation](#restarting) from where you left off. 
 
-Read through the script and when you have made the required modifications, submit the job using Sherlock
-
-```bash
-sbatch --job-name=$PWD run_cluster.py
-```
-
-or for CEES
-
-```bash
-qsub run_cluster.py
-```
-
-You are able to name the output inside the script using the `name` variable. The optimized structure will be written out as `name.traj`.
-
-**<font color="red">Requirement:</font>** Plot the change in the total slab energy as a function of different k-points: 1x1x1 (`'gamma'`), 2x2x2, 4x4x4. By default the 'gamma' keyword can be used when only 1 k-point is needed. Otherwise, specify all three k-points in the script (i.e., `kpts=(2,2,2)`). Use the `run_cluster.py` script. To save time, **use the optimized results** from your initial calculation with `gamma` as the input for the k = 2, 4 calculations. See [Restarting Calculations](#restarting).
-
-*Update (2015/02/15):* If you are working with an alloy, it is possible that you will see large structural rearrangements when you are optimizing. You are only required to use the result you get from the `gamma` for the project, but you may wish to explore other possible geometries for the cluster that might be lower in energy. In the `setup_cluster.py` script, simply uncomment the line
-
-```python
-#atoms = Icosahedron(element1, noshells=2)
-```
-
-to setup an icosahedron cluster. This geometry has at most three-fold coordination for adsorbates instead of four-fold in the cuboctahedral geometry.
-
-
-
-<a name='restarting'></a>
-
-### Restarting Calculations ###
-
-In case you didn't specify a long enough wall-time, the calculation can be continued by using your current output. Simply use the `ase-gui` command, which has a command-line feature for combining trajectory files.
-
-```bash
-ase-gui input.traj output.traj -o input.traj
-```
-
-this command combines `input.traj` and `output.traj` and writes it out to `input.traj`. This way, the `input.traj` will now include all trajectory images. You can then re-run the script without changing the filename to be read in.
-
-
-
-<a name='next'></a>
-
-### Next Steps ###
-
-**<font color="red">Requirement:</font>** Before we begin calculating adsorption energies, it is important to adopt a consistent set of calculation settings for the whole class. This is so that the results are calculated at the same level of accuracy and can be properly compared. 
-
-After you have finished the exercises above, make sure you have calculated your (111) (or (110) if you were assigned Mo) surface at these settings:
-
-* (2×2×4) unit cell
-* 4 layers, top 2 layers relaxed, bottom 2 layers fixed
-* 4×4×1 Monkhorst-Pack k-point set
-* 7 Å vacuum in the z-direction (both directions)
-
-And for your M<sub>13</sub>  cluster:
-
-* All atoms relaxed
-* `'gamma'` point for k-point sampling
-* 7 Å vacuum in all directions
+Read through the script and when you have made the required modifications, submit the job using Sherlock.
 
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

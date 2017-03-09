@@ -18,13 +18,10 @@ In the first exercise, we will be looking at MXenes and how to determine lattice
 ## Contents ##
 
 1. [A Typical ASE Script](#a-typical-ase-script)
-2. [Bulk metal](#bulk)
+2. [MXenes](#mxene)
   1. [Lattice Constant Determination](#lattice-constant-determination)
   2. [Convergence with k-Points](#convergence-with-k-points)
-3. [Setting up Surfaces](#surfaces)
-4. [Setting up Clusters](#clusters)
-5. [Restarting Calculations](#restarting)
-6. [Next Steps](#next)
+3. [Next Steps](#next)
 
 ### Required Files ###
 

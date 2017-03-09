@@ -27,7 +27,6 @@ Here is an example of a few commonly used modules for a calculation and how you 
 
 ```python
 from ase import Atoms
-from ase.constraints import FixAtoms
 from ase import optimize
 from espresso import espresso
 import numpy as np

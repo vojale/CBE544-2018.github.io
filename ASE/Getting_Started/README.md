@@ -208,25 +208,6 @@ Try changing the number of k-points in the x and y-direction (i.e., k×k×1) usi
 
 **<font color="red">Requirement:</font>** Plot the change in the total slab energy as a function of the different k-points (kxkx1 where k = {4, 6, 8}). Do this by changing the keyword in the `run_surf.py` script, e.g. `kpts=(2,2,1)`. How many k-points are sufficient?
 
-<a name='clusters'></a>
-
-### Metal Clusters ###
-
-Head into the `Exercise_1_Getting_Started/Cluster/` folder.
-
-Next we will use the `ase.cluster.octahedron` module to set up metal clusters. This will create M<sub>13</sub> clusters with 4 fold and 3 fold coordination. The [`setup_cluster.py`](setup_cluster.py) script demonstrates how to set up the 13 atom metallic cluster. **Change Pt into the metal or alloy you have been assigned**. This can be run within the login node using
-
-```bash
-$ python setup_cluster.py
-$ ase-gui cluster.traj
-```
-
-<center><img src="Images/Au-cluster.png" alt="Au cluster" style="width: 300px;"/>
-<br>Au<sub>13</sub> cluster</center>
-
-Next the [`run_cluster.py`](run_cluster.py) script will perform the optimization. **Note that you will probably need to allocate 10-20 hours for this calculation to finish.** Don't be alarmed if it is taking longer than all the other calculations. If you didn't allocate enough time, you can always [restart the calculation](#restarting) from where you left off. 
-
-Read through the script and when you have made the required modifications, submit the job using Sherlock.
 
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

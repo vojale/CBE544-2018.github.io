@@ -32,19 +32,19 @@ Take a look [here](http://CBE544.github.io/ASE/#ase-gui) if you need a reminder 
 
 First, open the .traj file with the optimized lattice constant that you obtained from the previous exercise. On the menu bar, select View -> Repeat. Under 'Repeat Atoms', change the first two numbers from 1 to 2; leave the third number as 1. Then, click set unit cell. Your cell should look like this:
 
-<center><img src="Images/overhead.png" alt="window" style="width: 400px;"/><br>
+<center><img src="overhead.png" alt="window" style="width: 400px;"/><br>
 2 x 2 surface of Ti<sub>2</sub>C
 </center>
 
 There are four possible adsorption sites on MXene surfaces that an adsorbate can bind to: the fcc, hcp, ontop, and bridge sites. These are illustrated below:
 
-<center><img src="Images/overhead.png" alt="window" style="width: 400px;"/><br>
+<center><img src="overhead.png" alt="window" style="width: 400px;"/><br>
 2 x 2 surface of Ti<sub>2</sub>C
 </center>
 
 In the `ase-gui`, click the atom above where the adsorbate will sit, press `Ctrl + A`, then specify the adsorbate and the vertical distance above the site. You can also hold `Ctrl` to select multiple atoms and add an adsorbate, which will be at the center of all the selected atoms. You can move the atoms by selecting the atom(s) you wish to move, press `Ctrl + M`, and use the arrow keys to move the atom(s); press `Ctrl + M` again to deselect the atom(s) for moving. In the following figure, we illustrate the placement of N on the ontop site:
 
-<center><img src="Images/N_ontop.png" alt="window" style="width: 400px;"/><br>
+<center><img src="N_ontop.png" alt="window" style="width: 400px;"/><br>
 ontop N<sub>2</sub>C
 </center>
 

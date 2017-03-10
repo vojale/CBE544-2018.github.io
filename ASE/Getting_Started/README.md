@@ -41,20 +41,6 @@ This should create a folder called `Exercise_1_Getting_Started/` containing subf
 
 ### A Typical ASE Script ###
 
-VERY IMPORTANT! The first time you login to Stampede, edit your bash profile:
-
-```bash
-nano ~/.bash_profile
-```
-Add the following to the end of the file:
-
-```bash
-source  /home1/03672/tg829713/vojgroup/bash_script/group_bash_env
-```
-
-Save the file, logout, and login again. This ensures that you are using the correct python installation with all the proper modules to run the rest of these exercises. You only need to do this step once.
-
-
 ASE scripts can be run directly in the terminal (in the login node) or submitting to external nodes. Generally, you will be submitting jobs to external nodes and only small scripts will be run on the login node. By default, all output from any submitted script will be written *from the directory where the submission command was executed*, so make sure you are inside the calculation folder before running the submission command.
 
 There are two files that are necessary to run jobs on the Stampede cluster. The first is `spede_esp.sub`; this is the file that tells the scheduler how much time the job is allowed, how many processors it requires, and other pertinent information. First, notice the comments in the beginning. These include information such as how much time to allocate, the number of nodes required, what the names of the output and error files are, what the name of the job should be, and what your email is. 

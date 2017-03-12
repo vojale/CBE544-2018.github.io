@@ -13,7 +13,7 @@ ____
 
 ## Getting Started ##
 
-In the first exercise, we will be looking at MXenes and how to determine lattice constants, then we will be setting up adsorbates. For homework 5, you will all be doing the same system (Ti2C). For the final project, you will use the same structure but with different atoms (e.g., Mo2N instead of Ti2C).
+In the first exercise, we will be looking at MXenes and how to determine lattice constants, then we will be setting up adsorbates. For homework 5, you will all be doing the same system (Ti<sub>2</sub>C). For the final project, you will use the same structure but with different atoms (e.g., Mo<sub>2</sub>N instead of Ti<sub>2</sub>C).
 
 ## Contents ##
 
@@ -49,10 +49,10 @@ There are two files that are necessary to run jobs on the Stampede cluster. The 
 #!/bin/bash
 
 #SBATCH -J test        # Job Name
-#SBATCH -A TG-ENG160034 #Kurt's allocation: TG-ENG160034, Ting's allocation TG_CHE160077
-#SBATCH -o ll_out    # Output and error file name
-#SBATCH -e ll_err    # Output and error file name
-#SBATCH -n 16          # Total number of mpi tasks requested
+#SBATCH -A TG-CHE160084 # Allocation number: Do not change this
+#SBATCH -o ll_out    # Output file name
+#SBATCH -e ll_err    # Error file name
+#SBATCH -n 16          # Total number of cores requested
 #SBATCH -p normal # which queue to run in
 #SBATCH -t 03:00:00     # Run time (hh:mm:ss)
 #SBATCH --mail-user=youremail@whatever.com # Make sure to change this!!!!
@@ -64,7 +64,7 @@ The next five lines tell the job exactly what to execute; do not change these li
 Finally, the last line 
 
 ```bash
-python run.py
+python Energy.py
 
 ```
 picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
@@ -135,13 +135,13 @@ Here, `--job-name=$PWD` sets the current working directory as the job name.
 
 The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function. Then, use calculus to find the minimum energy, and thus the true lattice constant.
 
-**HW 5:** Report the true lattice constant.
+**HW 5:** Plot the energies as listed above, and report the true lattice constant.
 
 The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or strain). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
 
 $B=S_{0}\frac{d^{2}E}{dS^{2}}$
 
-where S is the surface area of the sheet (a variable) and S_0 is the true surface area. Note that in this case we are fitting the surface area S, _not_ the lattice constant! The surface area of the MXenes is given by:
+where S is the surface area of the sheet (a variable) and S<sub>0</sub> is the true surface area. Note that in this case we are fitting the surface area S, _not_ the lattice constant! The surface area of the MXenes is given by:
 
 $S=\frac{\sqrt{3}}{2}a^{2}$
 
@@ -150,10 +150,10 @@ $S=\frac{\sqrt{3}}{2}a^{2}$
 <a name='convergence-with-k-points'></a>
 
 #### Convergence with k-Points ####
-Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Submit the [`kpoints.py`](kpoints.py) script using the lattice parameter obtained from the previous section.
-
-Try using k = (2,2,1), (4,4,1), (6,6,1) and (8,8,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
+Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Modify the [`Lattice_Constant.py`](Lattice_Constant.py) script using the lattice parameter obtained from the previous section. Instead of looping over strain values as above, modify the script to keep the same lattice constant and loop over kpoints instead. Try using k = (2,2,1), (4,4,1), (6,6,1), (10,10,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
 
 **HW 5:** Show the k-point convergence plot, your pick for the k-points, and your rationale.
+
+For the final project, we will be using (8x8x1) kpoints for the (1x1) MXene surfaces, and (4x4x1) kpoints for the (2x2) MXene surfaces.
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

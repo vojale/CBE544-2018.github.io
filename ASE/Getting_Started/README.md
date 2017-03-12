@@ -139,14 +139,6 @@ The output states the energy with respect to the given lattice constant. Take th
 
 **HW 5:** Plot the energies as listed above, and report the true lattice constant.
 
-To set the lattice constant of your MXene sheet (to the true one calculated above), open your .traj file in the `ase-gui`. Press `Ctrl + E` to open up the 'Expert Mode'. In the text box, type `A` and press `Enter`. You should now see this:
-
-```bash
->>>A
-array([[ 3.1, 0., 0.],
-[-1.55, 2.6846, 0.],
-0., 0., 18.687]])
-```
 The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or compress). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
 
 $B=S_{0}\frac{d^{2}E}{dS^{2}}$

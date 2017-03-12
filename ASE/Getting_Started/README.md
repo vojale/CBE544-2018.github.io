@@ -145,7 +145,7 @@ where S is the surface area of the sheet (a variable) and S<sub>0</sub> is the t
 
 $S=\frac{\sqrt{3}}{2}a^{2}$
 
-**HW 5:** Report the two-dimensional bulk modulus of Ti2C.
+**HW 5:** Report the two-dimensional bulk modulus of Ti<sub>2</sub>C.
 
 <a name='convergence-with-k-points'></a>
 

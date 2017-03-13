@@ -25,10 +25,6 @@ Final Report (70% - <font color="red">Due 3/13 11:59 PM (Hard deadline)</font>)
 ### Atomic Simulation Environment ###
 
 1. [Introduction to ASE](ASE/)
-2. [Project Part 1 - Getting Started with ASE (10% - Due 2/22 <font color="red">(Extended)</font>)](ASE/Getting_Started/)
-3. [Project Part 2 - Adsorption Energies (10% - Due 2/26)](ASE/Adsorption/)
-4. [Scripts](Scripts/)
-
 
 ### Resources ###
 

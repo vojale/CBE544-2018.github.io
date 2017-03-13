@@ -152,10 +152,12 @@ $$S=\frac{\sqrt{3}}{2}a^{2}$$
 <a name='convergence-with-k-points'></a>
 
 #### Convergence with k-Points ####
-Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Modify the [`Lattice_Constant.py`](Lattice_Constant.py) script using the lattice parameter obtained from the previous section. Instead of looping over strain values as above, modify the script to keep the same lattice constant and loop over kpoints instead. Try using k = (2,2,1), (4,4,1), (6,6,1), (10,10,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
+Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Modify the [`Lattice_Constant.py`](Lattice_Constant.py) script using the lattice parameter obtained from the previous section. Instead of looping over strain values as above, modify the script to keep the same lattice constant and loop over kpoints instead. Try using k = (2,2,1), (4,4,1), (6,6,1), (8,8,1), and (10,10,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
 
 **HW 5:** Show the k-point convergence plot, your pick for the k-points, and your rationale.
 
 For the final project, we will be using (8x8x1) kpoints for the (1x1) MXene surfaces, and (4x4x1) kpoints for the (2x2) MXene surfaces.
+
+We have also provided the `Lattice_Resize.py` script that reads in a .traj file, and changes the lattice to the correct version resized with the lattice constant provided. In the script, you need to change the lattice constant you want manually.
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

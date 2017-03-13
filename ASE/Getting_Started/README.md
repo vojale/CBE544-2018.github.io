@@ -141,11 +141,11 @@ The output states the energy with respect to the given lattice constant. Take th
 
 The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or compress). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
 
-$B=S_{0}\frac{d^{2}E}{dS^{2}}$
+$$B=S_{0}\frac{d^{2}E}{dS^{2}}$$
 
 where S is the surface area of the sheet (a variable) and S<sub>0</sub> is the true surface area. Note that in this case we are fitting the surface area S, _not_ the lattice constant! The surface area of the MXenes is given by:
 
-$S=\frac{\sqrt{3}}{2}a^{2}$
+$$S=\frac{\sqrt{3}}{2}a^{2}$$
 
 **HW 5:** Report the two-dimensional bulk modulus of Ti<sub>2</sub>C.
 

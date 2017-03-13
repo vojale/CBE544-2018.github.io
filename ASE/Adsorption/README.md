@@ -52,8 +52,8 @@ Make sure to save the new .traj file via `Ctrl + S`.
 
 To relax these atoms, use the `Relax.py`script. Read the script to make sure you understand what it does. (Note: In the calculator the k-point mesh is now (4x4x1) instead of the (8x8x1) we were using in the previous steps. Why?) The output should look like this:
 ```
-BFGS: 0 20:33:56 -13667.108639 136.3606
-BFGS: 1 20:38:43 -13675.857635  89.5080
+BFGS:   0 20:33:56    -13667.108639 136.3606
+BFGS:   1 20:38:43    -13675.857635  89.5080
 BFGS:   2  20:42:59   -13680.647385	 65.7332
 BFGS:   3  20:47:11   -13683.809679	 50.8884
 BFGS:   4  20:51:23   -13686.061782	 40.5300

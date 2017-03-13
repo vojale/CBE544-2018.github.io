@@ -1,6 +1,6 @@
 ---
 layout: page
-mathjax: false 
+mathjax: true
 permalink: /ASE/Getting_Started/
 ---
 

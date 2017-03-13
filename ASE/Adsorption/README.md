@@ -51,7 +51,7 @@ ontop N on Ti<sub>2</sub>C
 Make sure to save the new .traj file via `Ctrl + S`.
 
 To relax these atoms, use the `Relax.py`script. Read the script to make sure you understand what it does. (Note: In the calculator the k-point mesh is now (4x4x1) instead of the (8x8x1) we were using in the previous steps. Why?) The output should look like this:
-
+```
 BFGS: 0 20:33:56 -13667.108639 136.3606
 BFGS: 1 20:38:43 -13675.857635  89.5080
 BFGS:   2  20:42:59   -13680.647385	 65.7332
@@ -66,8 +66,9 @@ BFGS:  10  21:16:48   -13691.266948	 14.5243
 BFGS:  11  21:20:36   -13691.626984	 12.3675
 BFGS:  12  21:24:20   -13691.933360	 10.4735
 ....
+```
 
-The first column tells us we are using a Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm to optimize the atomic positions. The second column is the step number (the first step before we move atoms at all is 0). The third coulmn tells us the time each ionic step is calculated, the fourth column is the total energy of the system (eV), and the last column is the maximum force on an atom (eV/Å).
+The first column tells us we are using a Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm to optimize the atomic positions. The second column is the step number (the first step before we move atoms at all is 0). The third column tells us the time each ionic step is calculated, the fourth column is the total energy of the system (eV), and the last column is the maximum force on an atom (eV/Å).
 
 It is possible that the system does not finish relaxing in the time given to it by the scheduler. If this happens, simply copy the .traj created by the script (in this case, Relax.traj) to the original .traj file name. When the script reads the .traj file, if there are multiple atomic configurations in the file, it will read the last one by default. In this way, you can run the script from before and start where the previous calculation left off.
 

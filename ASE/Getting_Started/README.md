@@ -158,6 +158,11 @@ Next, we will determine how well-converged the energy is with respect to the num
 
 For the final project, we will be using (8x8x1) kpoints for the (1x1) MXene surfaces, and (4x4x1) kpoints for the (2x2) MXene surfaces.
 
-We have also provided the `Lattice_Resize.py` script that reads in a .traj file, and changes the lattice to the correct version resized with the lattice constant provided. In the script, you need to change the lattice constant you want manually.
+We have also provided the `Lattice_Resize.py` script that reads in a .traj file, and changes the lattice to the correct version resized with the lattice constant provided. In the script, you need to change the lattice constant you want manually. Unlike the rest of the scripts given to you, this script can be run directly from the command line, without using the submission system, by using:
+
+```
+bash
+python Lattice_Resize.py
+```
 
 **Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.

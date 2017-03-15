@@ -6,12 +6,12 @@ permalink: /ASE/Getting_Started/
 
 # ASE Tutorials
 1. [Introduction to ASE](../)
-2. [Getting Started](../Getting_Started/)
+2. [Getting Started with DFT Calculations](../Getting_Started/)
 3. [Adsorption](../Adsorption/)
 
 ____
 
-## Getting Started ##
+## Getting Started with DFT Calculations ##
 
 In the first exercise, we will be studying MXenes and how to determine their lattice constants, then we will be studying the interaction between the MXene and an adsorbate. For Homework 5, everyone will be studying the same system (Ti<sub>2</sub>C). For the Final Project, you will use the same structure but with different chemical composition (e.g., Mo<sub>2</sub>N instead of Ti<sub>2</sub>C).
 

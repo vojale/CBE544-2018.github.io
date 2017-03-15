@@ -29,7 +29,7 @@ We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dt
 
 1. [Logging Into the Computing Clusters](Clusters/)
 2. [Basic UNIX](UNIX/)
-3. [Python](Python/)
+3. [Python Tutorial](Python/)
 
 
 ### Atomic Simulation Environment ###

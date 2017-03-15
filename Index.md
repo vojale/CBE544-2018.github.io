@@ -38,8 +38,11 @@ We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dt
 
 ### Resources ###
 
-1. [Atomic Simulation Environment](https://wiki.fysik.dtu.dk/ase/)
-2. [CatApp](http://slac.stanford.edu/~strabo/catapp/catapp.htm)
-3. [Searchable CatApp](http://web.stanford.edu/~ctsai89/cgi-bin/apps/katapp/search)
-4. [Scaling Relations Plotter](http://web.stanford.edu/~ctsai89/cgi-bin/apps/katapp/plot)
-3. [CatMAP](https://github.com/SUNCAT-Center/catmap)
+1. [UNIX Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+2. [Top 10 Best Cheat Sheets and Tutorials for Linux / UNIX Commands](https://www.cyberciti.biz/tips/linux-unix-commands-cheat-sheets.html)
+3. Intro to [Vim](https://www.cs.colostate.edu/helpdocs/vi.html) and [Nano](https://www.nano-editor.org/dist/v2.0/nano.html)
+4. [Atomic Simulation Environment](https://wiki.fysik.dtu.dk/ase/)
+5. [CatApp](http://slac.stanford.edu/~strabo/catapp/catapp.htm)
+6. [Searchable CatApp](http://web.stanford.edu/~ctsai89/cgi-bin/apps/katapp/search)
+7. [Scaling Relations Plotter](http://web.stanford.edu/~ctsai89/cgi-bin/apps/katapp/plot)
+8. [CatMAP](https://github.com/SUNCAT-Center/catmap)

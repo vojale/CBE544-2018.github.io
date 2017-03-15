@@ -162,4 +162,4 @@ bash
 python Lattice_Resize.py
 ```
 
-**Next**: move on to [Adsorption](../Adsorption/) to learn about how to calculate adsorbates on your surface.
+**Next**: move on to [Adsorption](../Adsorption/) to learn about how to add adsorbates on your surface.

@@ -146,8 +146,7 @@ For the Final Project, we will be using (8x8x1) k-points for the (1x1) MXene sur
 
 We have also provided the `Lattice_Resize.py` script that reads in a .traj file, and changes the lattice to the correct version resized with the lattice constant provided. In the script, you need to change the lattice constant you want manually. Unlike the rest of the scripts given to you, this script can be run directly from the command line, without using the submission system, by using:
 
-```
-bash
+```bash
 python Lattice_Resize.py
 ```
 

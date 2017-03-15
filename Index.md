@@ -6,15 +6,15 @@ permalink: /
 
 This website contains information about the CBE544 final course project, the home work problem set 5, as well as some tutorials to help you along the way.
 
-We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/) with the [ASE interface for the Quantum ESPRESSO calculator](http://github.com/vossjo/ase-espresso). Computing resources will be provided by [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu)'s [Stampede system](https://portal.tacc.utexas.edu/user-guides/stampede) The tutorials cover the basic usage of the UNIX shell, scripting in Python, and performing calculations using ASE. As part of the requirements for the final project, you will need to complete the exercises by their respective deadlines.
+We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/) with the [ASE interface for the Quantum ESPRESSO calculator](http://github.com/vossjo/ase-espresso). Computing resources will be provided by [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu)'s [Stampede system](https://portal.tacc.utexas.edu/user-guides/stampede) The tutorials cover the basic usage of the UNIX shell, scripting in Python, and performing calculations using ASE. As part of the requirements for the final project, you will need to have passed HW5 before even starting the final project and you will have to complete the exercises by their respective deadlines.
 
 ## Projects ##
 
 1. Homework 5 (<font color="red">Due Friday March 24 @ 5:00PM</font>)
+  a. [Problem Description](/HW5)
 2. Final Project (60% - <font color="red">Due Monday May 1 5:00PM</font>)
-
-1. [Project Description and Requirements](Project/)
-2. [Project Assignments](Project_Assignments/)
+  a. [Project Description and Requirements](Project/)
+  b. [Project Assignments](Project_Assignments/)
 
 
 ### Getting Started ###

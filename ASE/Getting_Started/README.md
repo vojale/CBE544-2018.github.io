@@ -13,7 +13,7 @@ ____
 
 ## Getting Started ##
 
-In the first exercise, we will be looking at MXenes and how to determine lattice constants, then we will be setting up adsorbates. For homework 5, you will all be doing the same system (Ti<sub>2</sub>C). For the final project, you will use the same structure but with different atoms (e.g., Mo<sub>2</sub>N instead of Ti<sub>2</sub>C).
+In the first exercise, we will be studying MXenes and how to determine their lattice constants, then we will be studying the interaction between the MXene and an adsorbate. For Homework 5, everyone will be studying the same system (Ti<sub>2</sub>C). For the Final Project, you will use the same structure but with different chemical composition (e.g., Mo<sub>2</sub>N instead of Ti<sub>2</sub>C).
 
 ## Contents ##
 

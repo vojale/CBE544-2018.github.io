@@ -25,9 +25,7 @@ In the first exercise, we will be studying MXenes and how to determine their lat
 
 ### Required Files ###
 
-Obtain the required files by running:
-
-on Stampede:
+Obtain the required files by running on Stampede:
 
 ```bash
 cd $SCRATCH
@@ -35,7 +33,7 @@ wget http://CBE544.github.io/ASE/Getting_Started/exercise_1_sherlock.tar
 tar -xvf exercise_1_sherlock.tar
 ```
 
-This should create a folder called `Exercise_1_Getting_Started/` containing subfolders with all the starter scripts you will need. By default, The output for your calculations will be written into the folder from where you submitted the script. To perform new calculations, you will generally be copying the scripts from these tutorials into new folders, modifying them, and submitting them.
+This should create a folder called `Exercise_1_Getting_Started/` containing subfolders with all the starter scripts you will need. By default, the output for your calculations will be written into the folder from where you submitted the script. To perform new calculations, you will generally be copying the scripts from these tutorials into new folders, modifying them, and submitting them.
 
 <a name='a-typical-ase-script'></a>
 
@@ -126,20 +124,20 @@ The `-J $PWD` gives the name of the job as the current directory. Make sure this
 
 #### Lattice Constant Determination ####
 
-Find the [`Lattice_Relax.py`](Lattice_Relax.py) script in the `lattice` folder. This script calculates the different energies of the system as a dunction of the lattice constant. Before you run this job, make sure you read the comments within to understand what it does. You will later need to modify this file for the final project.
+Find the [`Lattice_Relax.py`](Lattice_Relax.py) script in the `lattice` folder. This script calculates the different energies of the system as a function of the lattice constant. Before you run this job, make sure you read the comments within to understand what it does. You will later need to modify this file for the Final Project.
 
-Remeber to change the script name to Lattice_Relax.py in the `spede_esp.sub` file! Submit the script by running:
+Remember to change the script name to Lattice_Relax.py in the `spede_esp.sub` file! Submit the script by running:
 
 ```bash
 sbatch --job-name=$PWD spede_esp.sub
 ```
 Here, `--job-name=$PWD` sets the current working directory as the job name. 
 
-The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function. Then, use calculus to find the minimum energy, and thus the true lattice constant.
+The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function. Then, use calculus to find the minimum energy, and thus the DFT lattice constant.
 
-**HW 5:** Plot the energies as listed above, and report the true lattice constant.
+**HW 5:** Plot the energies as listed above, and report the DFT lattice constant.
 
-The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or compress). Take the lattice script given before, change the given value to the true lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
+The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or compress). Take the lattice script given before, change the given value to the DFT lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
 
 $$B=S_{0}\frac{d^{2}E}{dS^{2}}$$
 
@@ -152,11 +150,11 @@ $$S=\frac{\sqrt{3}}{2}a^{2}$$
 <a name='convergence-with-k-points'></a>
 
 #### Convergence with k-Points ####
-Next, we will determine how well-converged the energy is with respect to the number of k-points in each direction. Modify the [`Lattice_Constant.py`](Lattice_Constant.py) script using the lattice parameter obtained from the previous section. Instead of looping over strain values as above, modify the script to keep the same lattice constant and loop over kpoints instead. Try using k = (2,2,1), (4,4,1), (6,6,1), (8,8,1), and (10,10,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last kpoint is always 1).
+Next, we will determine how well-converged the total energy is with respect to the number of k-points in each direction. Modify the [`Lattice_Constant.py`](Lattice_Constant.py) script using the lattice parameter obtained from the previous section. Instead of looping over strain values as above, modify the script to keep the same lattice constant and loop over k-points instead. Try using k = (2,2,1), (4,4,1), (6,6,1), (8,8,1), and (10,10,1), and plot the energy as a function of k-points. Pick one and try to justify why it would be a reasonable choice. The relevant k-points will usually be known, since we have consistent settings that we use throughout the group. In principle, one should always check for convergence when working with a new system. (Side note: Think about why the last k-point is always 1).
 
 **HW 5:** Show the k-point convergence plot, your pick for the k-points, and your rationale.
 
-For the final project, we will be using (8x8x1) kpoints for the (1x1) MXene surfaces, and (4x4x1) kpoints for the (2x2) MXene surfaces.
+For the Final Project, we will be using (8x8x1) k-points for the (1x1) MXene surfaces, and (4x4x1) k-points for the (2x2) MXene surfaces.
 
 We have also provided the `Lattice_Resize.py` script that reads in a .traj file, and changes the lattice to the correct version resized with the lattice constant provided. In the script, you need to change the lattice constant you want manually. Unlike the rest of the scripts given to you, this script can be run directly from the command line, without using the submission system, by using:
 

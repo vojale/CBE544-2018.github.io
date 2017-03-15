@@ -13,7 +13,7 @@ ____
 
 ## Adsorption on MXenes ##
 
-In the second exercise, you will be calculating the adsorption of N atoms on the Ti<sub>2</sub>C surface. The adsorption energy is defined as:
+In the second exercise, you will be calculating the adsorption energy of a N on the Ti<sub>2</sub>C surface and determining what the most favorable adsorption site is. The adsorption energy is defined as:
 <div>
 
 $$
@@ -22,13 +22,13 @@ $$
 
 </div>
 
-where N* refers to adsorbed N. We have *E*<sub>surface</sub> from the previous exercise (the total energy of the previous slab x 4, since we will soon be doubling the cell in the x and y directions), so we will need to calculate *E*<sub>surface + N*</sub>. The energy of E<sub>N</sub> is -278.275 eV (we will talk about where this energy came from in the final project).
+where N* refers to adsorbed N. We have *E*<sub>surface</sub> from the previous exercise (the total energy of the previous slab x 4, since we will soon be doubling the cell in the x and y directions), so we will need to calculate *E*<sub>surface + N*</sub>. The energy of E<sub>N</sub> is -278.275 eV (we will talk about where this energy came from in the Final Project).
 
 <a name='adsorption-sites'></a>
 
 ### Adsorption Sites ###
 
-Take a look [here](http://CBE544.github.io/ASE/#ase-gui) if you need a reminder on how to add atoms using `ase-gui`. We will describe how to add atoms within the ASE script below.
+Take a look [here](http://CBE544.github.io/ASE/#ase-gui) if you need a reminder of how to add atoms using `ase-gui`. We will describe how to add atoms within the ASE script below.
 
 First, open the .traj file with the optimized lattice constant that you obtained from the previous exercise. On the menu bar, select View -> Repeat. Under 'Repeat Atoms', change the first two numbers from 1 to 2; leave the third number as 1. Then, click set unit cell. Your cell should look like this:
 
@@ -36,7 +36,7 @@ First, open the .traj file with the optimized lattice constant that you obtained
 2 x 2 surface of Ti<sub>2</sub>C
 </center>
 
-There are four possible adsorption sites on MXene surfaces that an adsorbate can bind to: the fcc, hcp, ontop, and bridge sites. These are illustrated below:
+There are four possible adsorption sites on a two-dimensional MXene surface that an adsorbate can bind to: the fcc, hcp, ontop, and bridge sites. These are illustrated below:
 
 <center><img src="overhead.png" alt="window" style="width: 400px;"/><br>
 2 x 2 surface of Ti<sub>2</sub>C
@@ -72,6 +72,6 @@ The first column tells us we are using a Broyden–Fletcher–Goldfarb–Shanno 
 
 It is possible that the system does not finish relaxing in the time given to it by the scheduler. If this happens, simply copy the .traj created by the script (in this case, Relax.traj) to the original .traj file name. When the script reads the .traj file, if there are multiple atomic configurations in the file, it will read the last one by default. In this way, you can run the script from before and start where the previous calculation left off.
 
-**HW 5:** Using the `Relax.py` script, calculate the E<sub>ads</sub> for N in each of the four stable sites. List each E<sub>ads</sub>, and say which is the most stable site.
+**HW 5:** Using the `Relax.py` script, calculate the E<sub>ads</sub> for N in each of the four adsorption sites. List each E<sub>ads</sub>, and say which is the most stable site.
 
- Note: All sites may not be stable (the adsorbed N may move to a different site). If it is clear that the atom is relaxing away from the initial site, you do not need to run the calculation any further if you run out of time; simply state that the position is unstable.
+Note: All sites may not be stable (the adsorbed N may move to a different site). If it is clear that the atom is relaxing away from the initial site, you do not need to run the calculation any further if you run out of time; simply state that the position is unstable.

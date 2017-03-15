@@ -8,18 +8,19 @@ This website contains information about the CBE544 final course project, the hom
 
 We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/) with the [ASE interface for the Quantum ESPRESSO calculator](http://github.com/vossjo/ase-espresso). Computing resources will be provided by [Texas Advanced Computing Center (TACC)](https://www.tacc.utexas.edu)'s [Stampede system](https://portal.tacc.utexas.edu/user-guides/stampede) The tutorials cover the basic usage of the UNIX shell, scripting in Python, and performing calculations using ASE. As part of the requirements for the final project, you will need to have passed HW5 before even starting the final project and you will have to complete the exercises by their respective deadlines.
 
-%## Projects ##
+## Projects ##
 
-### HomeWork 5 Problem Set ###
-1. Homework 5 (<font color="red">Due Friday March 24 @ 5:00PM</font>)
+### HomeWork 5 ###
+(<font color="red">Due Friday March 24 @ 5:00PM</font>)
   * [Problem Description](/HW5)
   
 ### Final Project ###
-2. Final Project (60% - <font color="red">Due Monday May 1 5:00PM</font>)
+(60% - <font color="red">Due Monday May 1 5:00PM</font>)
   * [Project Description and Requirements](Project/)  
   * [Project Assignments](Project_Assignments/)
 
 
+## Guides ##
 ### Getting Started ###
 
 1. [Logging Into the Computing Clusters](Clusters/)

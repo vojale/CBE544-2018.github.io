@@ -14,8 +14,8 @@ We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dt
   * [Problem Description](/HW5)
   
 2. Final Project (60% - <font color="red">Due Monday May 1 5:00PM</font>)
-  a. [Project Description and Requirements](Project/)  
-  b. [Project Assignments](Project_Assignments/)
+  * [Project Description and Requirements](Project/)  
+  * [Project Assignments](Project_Assignments/)
 
 
 ### Getting Started ###

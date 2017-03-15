@@ -18,8 +18,10 @@ We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dt
 ### Final Project ###
 * 60% of final grade 
 * <font color="red">Due Monday May 1 5:00PM</font>
-* [Project Description and Requirements](Project/)  
-* [Project Assignments](Project_Assignments/)
+<!---* [Project Description and Requirements](Project/) --->
+* [Project Description and Requirements]() 
+* [Project Assignments]()
+<!---* [Project Assignments](Project_Assignments/) ---> 
 
 
 ## Guides ##

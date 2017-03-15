@@ -12,7 +12,8 @@ We will be using the [Atomic Simulation Environment (ASE)](https://wiki.fysik.dt
 
 ### HomeWork 5 ###
 * 4% of final grade
-* <font color="red">Due Friday March 24 @ 5:00PM</font>
+* <font color="red"> Due Friday March 24 @ 5:00PM </font>
+<font color="green"> Some green text </font>
 * [Problem Description](/HW5)
   
 ### Final Project ###

@@ -23,17 +23,6 @@ In the first exercise, we will be studying MXenes and how to determine their lat
   2. [Convergence with k-points](#convergence-with-k-points)
 3. [Next Steps](#next)
 
-### Required Files ###
-
-Obtain the required files by running on Stampede:
-
-```bash
-cd $SCRATCH
-wget http://CBE544.github.io/ASE/Getting_Started/exercise_1_sherlock.tar
-tar -xvf exercise_1_sherlock.tar
-```
-
-This should create a folder called `Exercise_1_Getting_Started/` containing subfolders with all the starter scripts you will need. By default, the output for your calculations will be written into the folder from where you submitted the script. To perform new calculations, you will generally be copying the scripts from these tutorials into new folders, modifying them, and submitting them.
 
 <a name='a-typical-ase-script'></a>
 

@@ -63,7 +63,6 @@ Finally, the last line
 
 ```bash
 python Energy.py
-
 ```
 picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
 

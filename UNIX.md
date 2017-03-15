@@ -167,7 +167,7 @@ Any number of characters. Example: ```ls *.traj``` will list all ```.traj``` fil
 <a name='text-editors'></a>
 
 ## Text Editors
-There are several text editors available. Popular ones include ```vim``` and ```nano```. 
+There are several text editors available. Popular ones include [vim](https://www.cs.colostate.edu/helpdocs/vi.html) and [nano](https://www.nano-editor.org/dist/v2.0/nano.html). 
 
 <a name='submitting-jobs'></a>
 

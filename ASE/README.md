@@ -75,4 +75,4 @@ For the extended surfaces (e.g., 111) you can repeat the slab. This is convenien
 Repeating a slab
 </center>
 
-**Next**: move on to [Getting Started](Getting_Started/) when you're ready to start doing some DFT!
+**Next**: move on to [Getting Started with DFT Calculations](Getting_Started/) when you're ready to start doing some DFT!

@@ -48,7 +48,7 @@ ASE supports a variety of file formats. More information about ASE can be found 
 
 As mentioned above, you can use the graphical user interface to view atomic structures. It is also convenient for adding or manipulating atoms inside your system. Read all the details [here](http://wiki.fysik.dtu.dk/ase/ase/gui/gui.html).
 
-Log on to stampede, download an example and take a look (the other files will all be used in the remainder of these examples):
+Log on to Stampede, download an example and take a look (the other files will all be used in the remainder of these examples):
 
 ```bash
 wget https://cbe544.github.io/ASE/archive.tar.gz

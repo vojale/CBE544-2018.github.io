@@ -20,7 +20,7 @@ In the first exercise, we will be studying MXenes and how to determine their lat
 1. [A Typical ASE Script](#a-typical-ase-script)
 2. [MXenes](#mxene)
   1. [Lattice Constant Determination](#lattice-constant-determination)
-  2. [Convergence with k-Points](#convergence-with-k-points)
+  2. [Convergence with k-points](#convergence-with-k-points)
 3. [Next Steps](#next)
 
 ### Required Files ###

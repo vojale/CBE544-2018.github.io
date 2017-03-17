@@ -45,6 +45,12 @@ There are two files that are necessary to run jobs on the Stampede cluster. The 
 #SBATCH --mail-user=youremail@whatever.com # Make sure to change this!!!!
 #SBATCH --mail-type=end # Emails you at the end of the job
 
+which pw.x
+cd $SLURM_SUBMIT_DIR
+export TMPDIR=$SLURM_SUBMIT_DIR
+echo $EPS_PSP_PATH
+export OMP_NUM_THREADS=1
+
 python Energy.py
 ```
 

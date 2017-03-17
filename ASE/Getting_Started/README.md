@@ -45,14 +45,12 @@ There are two files that are necessary to run jobs on the Stampede cluster. The 
 #SBATCH --mail-user=youremail@whatever.com # Make sure to change this!!!!
 #SBATCH --mail-type=end # Emails you at the end of the job
 
-```
-The next five lines tell the job exactly what to execute; do not change these lines.
-
-Finally, the last line 
-
-```bash
 python Energy.py
+
 ```
+
+Finally, the last line ```python Energy.py```
+
 picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
 
 

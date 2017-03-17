@@ -40,8 +40,8 @@ There are two files that are necessary to run jobs on the Stampede cluster. The 
 #SBATCH -o ll_out    # Output file name
 #SBATCH -e ll_err    # Error file name
 #SBATCH -n 16          # Total number of cores requested
-#SBATCH -p normal # which queue to run in
-#SBATCH -t 02:00:00     # Run time (hh:mm:ss)
+#SBATCH -p development # which queue to run in
+#SBATCH -t 00:30:00     # Run time (hh:mm:ss)
 #SBATCH --mail-user=youremail@whatever.com # Make sure to change this!!!!
 #SBATCH --mail-type=end # Emails you at the end of the job
 

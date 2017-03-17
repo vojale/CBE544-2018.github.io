@@ -46,12 +46,9 @@ There are two files that are necessary to run jobs on the Stampede cluster. The 
 #SBATCH --mail-type=end # Emails you at the end of the job
 
 python Energy.py
-
 ```
 
-Finally, the last line ```python Energy.py```
-
-picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
+Finally, the last line ```python Energy.py``` picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
 
 
 Let's look at how a typical ASE script is written. Open the [`Energy.py`](energy.py) script. We import all the relevant ASE modules in for this calculation

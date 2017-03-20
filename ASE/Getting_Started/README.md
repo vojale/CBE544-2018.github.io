@@ -115,7 +115,7 @@ The `-J $PWD` gives the name of the job as the current directory. Make sure this
 
 Find the [`Lattice_Constant.py`](Lattice_Constant.py) script in the `lattice` folder. This script calculates the different energies of the system as a function of the lattice constant. Before you run this job, make sure you read the comments within to understand what it does. You will later need to modify this file for the Final Project.
 
-Remember to change the script name to Lattice_Relax.py in the `spede_esp.sub` file! Submit the script by running:
+Remember to change the script name to Lattice_Constant.py in the `spede_esp.sub` file! Submit the script by running:
 
 ```bash
 sbatch --job-name=$PWD spede_esp.sub

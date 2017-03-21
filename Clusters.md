@@ -118,8 +118,14 @@ chmod g+s CBE544
 chmod g+rX CBE544
 ```
 
-**Perform all your calculations from the `work/CBE544` partition. **
-For example, Create a folder `hw5` under `CBE544` and perform all the calculations of HW5 in `hw5`
+**Perform all your calculations from the `work/CBE544` partition.**
+
+For example, Create a folder `hw5` under `CBE544` and perform all the calculations of HW5 in `hw5`. If you have already started you jobs somewhere else, you can copy the entire folder to CBE544 once you have done all the calculations. However, you need complete this step before sending us the report of HW5, and include the path of `CBE544` folder in your report or email. You can obtain the path by 
+```bash
+cdw
+cd CBE544
+pwd
+```
 
 <a name='first-time-cees'></a>
 ____

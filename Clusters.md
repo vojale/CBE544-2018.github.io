@@ -107,7 +107,19 @@ There are two file partitions, the `home` and the `work` partition. Go ahead and
 ln -s $WORK work
 ```
 
-**Perform all your calculations from the `work` partition.**
+**Change the permission of files:**
+```bash
+cd
+cd work
+mkdir CBE544
+chmod g+X $WORK
+chgrp -R G-818582 CBE544
+chmod g+s CBE544
+chmod g+rX CBE544
+```
+
+**Perform all your calculations from the `work/CBE544` partition. **
+For example, Create a folder `hw5` under `CBE544` and perform all the calculations of HW5 in `hw5`
 
 <a name='first-time-cees'></a>
 ____

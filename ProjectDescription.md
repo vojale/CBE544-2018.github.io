@@ -75,14 +75,14 @@ mkdir $SCRATCH/CHE444Project/
 
 You may run the exercises in any directory (as long as it is under `$SCRATCH`), but keep all the final files for the project organized.
 
-To describe the full reaction on your catalytic system, you will need to calculate the adsorption energies of all intermediates, in their most stable configuration (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). A mean field approximation can be used in the analysis (*e.g.* ∆*E*<sub>2NH</sub> = 2∆*E*<sub>NH</sub>). You are not required to calculate any of the transition states for this assignment.
+To describe the full reaction on your catalytic system, you will need to calculate the adsorption energies of all intermediates, in their most stable configuration (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). A mean field approximation can be used in the analysis (*e.g.* ∆*E*<sub>2NH</sub> = 2∆*E*<sub>NH</sub>). You are not required to calculate any of the transition states for this assignment. Instead use the universal BEP relations for N<sub>2</sub> dissociation.
 
 In summary:
 
-1. Structural relaxations on both your assigned M<sub>13</sub> cluster and a (111) surface for the same metals. [Project Part 1](../ASE/Getting_Started)
-2. **For the M<sub>13</sub> cluster only**: Adsorption energies for the remaining intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. [Project Part 2](../ASE/Adsorption)
-3. **For both M<sub>13</sub> cluster and metal surface**: Fixed bond length (FBL) calculation for the activation barrier for N<sub>2</sub> → 2N\*. You will need to perform an adsorption energy calculation for 2N\*, which will serve as the starting point for the FBL. [Project Part 3](../ASE/Transition_States)
-4. Vibrational analysis for the transition state **and** the adsorbed states. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)
+1. Structural relaxations on both the bare MXene and the two functionalized MXenes that is O-terminated and the H-terminated. [Project Part 1](../ASE/Getting_Started)
+2. Adsorption energies for the intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. [Project Part 2](../ASE/Adsorption)
+3. Energy diagrams for the overall reaction.
+4. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)
 
 Once you have finished the required calculations, you are free to explore other features of the reaction as you see fit.
 
@@ -91,23 +91,23 @@ Once you have finished the required calculations, you are free to explore other 
 When you have finished all your calculations. Confirm that your results are organized in the following way:
 
 ```bash
-../CBE544Project/Adsorption/
-../CBE544Project/Adsorption/Surface/
-../CBE544Project/Adsorption/Surface/2N/
-../CBE544Project/Adsorption/Surface/2N/config1
+../CBE544Project/bare/
+../CBE544Project/bare/Adsorption/
+../CBE544Project/bare/Adsorption/N/
+../CBE544Project/bare/Adsorption/N/config
+../CBE544Project/bare/Adsorption/NH/
+../CBE544Project/bare/Adsorption/NH/config
 ...
-../CBE544Project/Adsorption/Cluster/
-../CBE544Project/Adsorption/Cluster/2N/
-../CBE544Project/Adsorption/Cluster/NH/
-../CBE544Project/Adsorption/Cluster/NH/config1
-../CBE544Project/Adsorption/Cluster/NH/config2
-...
-../CBE444Project/Vibrations/N/
-../CBE444Project/Vibrations/2N/
+../CBE544Project/O-term/
+../CBE544Project/O-term/Adsorption/
+../CBE544Project/O-term/Adsorption/N/
+../CBE544Project/O-term/Adsorption/N/config
+../CBE544Project/O-term/Adsorption/NH/
+../CBE544Project/O-term/Adsorption/NH/config
 ...
 ```
 
-where `CBE544Project` is your **project directory**. You should rename `config1` to something that describes the binding configuration, such as `BrBr` for two bridging sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.
+where `CBE544Project` is your **project directory**. You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.
 
 On Sherlock, from your **project directory**, run:
 

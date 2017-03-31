@@ -86,13 +86,9 @@ table#t01 th    {
     <td>Sridhar, Sudiksha </td>
     <td>AuIr</td>
 </tr>
-<tr>
+<tr class="last">
     <td>Tang, Xiaoxin </td>
     <td>Mo</td>
 </tr>
 
-<tr class="last">
-    <td>vvmiller</td>
-    <td>CuPd</td>
-</tr>
 </table>

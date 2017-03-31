@@ -6,7 +6,7 @@ permalink: /Project_Assignments/
 
 ## Computing Cluster and Catalyst Assignment
 
-Half of the class will be using the CEES cluster and the other half will be using the Sherlock cluster. Please confirm your assignments below:
+Half of the class will be working on carbide MXenes and the other half will be working on nitride MXenes. Please confirm your assignments below:
 <style>
 table {
     width:100%;
@@ -39,8 +39,8 @@ table#t01 th    {
 </style>
 <table>
 <tr>
-    <th>SUNetID</th>
-    <th>Cluster</th>
+    <th>PennKey</th>
+    <th>???</th>
     <th>System</th>
 </tr>
 <tr>

@@ -14,7 +14,7 @@ permalink: /Project/
 7. [Summary of Requirements](#reqs)
 
 
-For the course project, you will be studying thermo-chemical ammonia synthesis on 2D MXenes. Each student will be assigned one MXene either a carbide or a nitride with the chemical formula M2X. The students will perform calculations individually but will prepare a report in groups of two (see list of Assigned Projects). The due date is <font color="red">5/1 at 5:00 PM (hard deadline)</font>.
+For the Final Project, you will be studying thermo-chemical ammonia synthesis on a 2D MXenes (M<sub>2</sub>X) with X = C or N. Each student will be assigned a MXene to work on either a carbide or a nitride (see list of Assigned Projects). The students will work in groups of two on the same MXene to perform calculations individually, however, complementing each other. Each pair of students will present their results in class that will be critiqued by another group of two. Finally, these four students will joinly write a final report on the combined data. The due date for the final written report is <font color="red">5/1 at 5:00 PM (hard deadline)</font>.
 
 Turn in your final report by emailing a PDF file to:
 
@@ -61,9 +61,7 @@ Your goals for the project will be to:
 (1) explore this reaction to find unique adsorption configurations and possibly more favorable thermodynamics,
 (2) explore if the theormodynamics can be changed with functionalization of the MXenes,
 (3) explore relations between the reaction intermediates in the pathway,
-(4) compare 
-
-You will be studying MXenes (M<sub>2</sub>X) with X = C or N. 
+(4) compare the chemsitry of the carbide and nitride MXenes.
 
 <a name='calcs'></a>
 

@@ -77,9 +77,18 @@ You may run the exercises in any directory (as long as it is under `$SCRATCH`), 
 
 To describe the full reaction on your catalytic system, you will need to calculate the adsorption energies of all intermediates, in their most stable configuration (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). A mean field approximation can be used in the analysis (*e.g.* ∆*E*<sub>2NH</sub> = 2∆*E*<sub>NH</sub>). You are not required to calculate any of the transition states for this assignment. Instead use the universal BEP relations for N<sub>2</sub> dissociation.
 
+First, download and unarchive the files you need via:
+
+```bash
+wget https://github.com/CBE544/CBE544.github.io/raw/master/Archive.tar
+tar -zxvf Archive.tar
+```
+
+This will create a directory named `Class`. Within, you will find pre-relaxed .traj files for the project. Your team will need the bare, O-terminated, and H-terminated MXenes. They are labeled as M2X.traj for the bare, M2XO2.traj for the O-terminated, and M2XH2.traj for the H-terminated; e.g. for Mo<sub>2</sub>C, the .traj file is Mo2C.traj for the bare MXene, Mo2CO2.traj for the O-terminated, and Mo2CH2.traj for the H-terminated.
+
 In summary:
 
-1. Structural relaxations on both the bare MXene and the two functionalized MXenes that is O-terminated and the H-terminated. [Project Part 1](../ASE/Getting_Started)
+1. Structural relaxations on both the bare MXene and the two functionalized MXenes; that is, O-terminated and H-terminated. [Project Part 1](../ASE/Getting_Started)
 2. Adsorption energies for the intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. [Project Part 2](../ASE/Adsorption)
 3. Energy diagrams for the overall reaction.
 4. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)

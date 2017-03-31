@@ -43,11 +43,11 @@ table#t01 th    {
     <th>System</th>
 </tr>
 <tr>
-    <td>aasundi</td>
+    <td>Frey, Nathan Christopher</td>
     <td>Ti2C</td>
 </tr>
 <tr>
-    <td>afk</td>
+    <td>Jang, Joonbaek </td>
     <td>Ti2N</td>
 </tr>
 <tr>

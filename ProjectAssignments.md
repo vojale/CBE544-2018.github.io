@@ -44,7 +44,7 @@ table#t01 th    {
 </tr>
 <tr>
     <td>Ti2C</td>
-    <td>Frey, Nathan Christopher,
+    <td>Frey, Nathan Christopher,<br>
         Padmanabhan, Ashwin </td>
 </tr>
 <tr>

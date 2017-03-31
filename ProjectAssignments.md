@@ -4,7 +4,7 @@ mathjax: false
 permalink: /Project_Assignments/
 ---
 
-## Computing Cluster and Catalyst Assignment
+##Project Assignment
 
 Half of the class will be working on carbide MXenes and the other half will be working on nitride MXenes. Please confirm your assignments below:
 <style>

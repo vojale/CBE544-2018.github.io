@@ -122,12 +122,6 @@ On Sherlock, from your **project directory**, run:
 /scratch/PI/suncat/chemeng444_2016/submit
 ```
 
-On CEES, from your **project directory**, run:
-
-```bash
-/data/cees/cheme444/submit
-```
-
 <a name='analysis'></a>
 
 ## Analysis ##
@@ -144,10 +138,7 @@ Beyond these points, you may discuss anything you find interesting. Here are som
 * What are other factors that can affect adsorbate-metal interaction?
 * How important is the coordination number of the metal? Compare the metal cluster to the metal surface.
 
-You are welcome to share data amongst your peers to discuss broader trends. (We encourage you to use [Piazza](http://piazza.com/class/ij0k0xrcxrz5pa) for questions and discussions so you can help each other troubleshoot and share data. You may also include additional calculations into your project (scripts available), but this is not required:
-
-* Density of states calculations on the surfaces
-* Error analysis using the BEEF ensembles
+You are welcome to share data amongst your peers to discuss broader trends. 
 
 **If you need the energy of the fixed clusters, they are available [here](../Fixed_Lattice_Clusters/energies.txt).**
 

@@ -105,6 +105,13 @@ When you have finished all your calculations. Confirm that your results are orga
 ../CBE544Project/O-term/Adsorption/NH/
 ../CBE544Project/O-term/Adsorption/NH/config
 ...
+../CBE544Project/H-term/
+../CBE544Project/H-term/Adsorption/
+../CBE544Project/H-term/Adsorption/N/
+../CBE544Project/H-term/Adsorption/N/config
+../CBE544Project/H-term/Adsorption/NH/
+../CBE544Project/H-term/Adsorption/NH/config
+...
 ```
 
 where `CBE544Project` is your **project directory**. You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.

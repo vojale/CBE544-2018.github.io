@@ -39,12 +39,13 @@ table#t01 th    {
 </style>
 <table>
 <tr>
-    <th>Name</th>
-    <th>System</th>
+    <th>Systen</th>
+    <th>Member</th>
 </tr>
 <tr>
-    <td>Frey, Nathan Christopher</td>
     <td>Ti2C</td>
+    <td>Frey, Nathan Christopher,
+        Padmanabhan, Ashwin </td>
 </tr>
 <tr>
     <td>Jang, Joonbaek </td>

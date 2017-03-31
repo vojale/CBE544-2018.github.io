@@ -40,7 +40,7 @@ table#t01 th    {
 <table>
 <tr>
     <th>Systen</th>
-    <th>Member</th>
+    <th>Group Member</th>
 </tr>
 <tr>
     <td>Zr2C</td>
@@ -67,34 +67,10 @@ table#t01 th    {
     <td>Rajaraman, Vishwanathan <br>
     Sridhar, Sudiksha </td>
 </tr>
-<tr>
+<tr class="last">
     <td>Mo2N</td>
     <td>Johnson, Luke Rachad<br>
     Leach, Connor</td>
-</tr>
-<tr>
-    <td>Raizada, Abhishek </td>
-    <td>PdRh</td>
-</tr>
-<tr>
-    <td>Rajaraman, Vishwanathan </td>
-    <td>Ir</td>
-</tr>
-<tr>
-    <td>Saiprasad, Sai Aparna</td>
-    <td>AgIr</td>
-</tr>
-<tr>
-    <td>Sankara Raman, Abhinav </td>
-    <td>CuRu</td>
-</tr>
-<tr>
-    <td>Sridhar, Sudiksha </td>
-    <td>AuIr</td>
-</tr>
-<tr class="last">
-    <td>Tang, Xiaoxin </td>
-    <td>Mo</td>
 </tr>
 
 </table>

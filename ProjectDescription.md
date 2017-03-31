@@ -91,8 +91,8 @@ This will create a directory named `Class`. Within, you will find pre-relaxed .t
 
 In summary:
 
-1. Structural relaxations on both the bare MXene and the two functionalized MXenes; that is, O-terminated and H-terminated. [Project Part 1](../ASE/Getting_Started)
-2. Adsorption energies for the intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. [Project Part 2](../ASE/Adsorption)
+1. Structural relaxations on both the bare MXene and the two functionalized MXenes; that is, O-terminated and H-terminated. 
+2. Adsorption energies for the intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. 
 3. Energy diagrams for the overall reaction.
 <!--4. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)-->
 

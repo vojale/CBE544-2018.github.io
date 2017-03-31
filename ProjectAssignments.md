@@ -43,29 +43,34 @@ table#t01 th    {
     <th>Member</th>
 </tr>
 <tr>
-    <td>Ti2C</td>
-    <td>Frey, Nathan Christopher,<br>
+    <td>Zr2C</td>
+    <td>Frey, Nathan Christopher<br>
         Padmanabhan, Ashwin </td>
 </tr>
 <tr>
-    <td>Jang, Joonbaek </td>
-    <td>Ti2N</td>
+    <td>Zr2N </td>
+    <td>Price, Chris <br>
+        Raizada, Abhishek </td>
 </tr>
 <tr>
-    <td>Johnson, Luke Rachad</td>
-    <td>AgRh</td>
+    <td>Nb2C</td>
+    <td>Jang, Joonbaek <br>
+    Saiprasad, Sai Aparna</td>
 </tr>
 <tr>
-    <td>Leach, Connor</td>
-    <td>AuRu</td>
+    <td>Nb2N</td>
+    <td>Sankara Raman, Abhinav <br>
+    Tang, Xiaoxin </td>
 </tr>
 <tr>
-    <td>Padmanabhan, Ashwin </td>
-    <td>PdMo</td>
+    <td>Mo2C</td>
+    <td>Rajaraman, Vishwanathan <br>
+    Sridhar, Sudiksha </td>
 </tr>
 <tr>
-    <td>Price, Chris </td>
-    <td>CuIr</td>
+    <td>Mo2N</td>
+    <td>Johnson, Luke Rachad<br>
+    Leach, Connor</td>
 </tr>
 <tr>
     <td>Raizada, Abhishek </td>

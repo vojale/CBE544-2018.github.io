@@ -51,156 +51,44 @@ table#t01 th    {
     <td>Ti2N</td>
 </tr>
 <tr>
-    <td>aholm</td>
+    <td>Johnson, Luke Rachad</td>
     <td>AgRh</td>
 </tr>
 <tr>
-    <td>alatimer</td>
+    <td>Leach, Connor</td>
     <td>AuRu</td>
 </tr>
 <tr>
-    <td>amtulges</td>
+    <td>Padmanabhan, Ashwin </td>
     <td>PdMo</td>
 </tr>
 <tr>
-    <td>ariscoe</td>
+    <td>Price, Chris </td>
     <td>CuIr</td>
 </tr>
 <tr>
-    <td>astrick</td>
+    <td>Raizada, Abhishek </td>
     <td>PdRh</td>
 </tr>
 <tr>
-    <td>bonils</td>
+    <td>Rajaraman, Vishwanathan </td>
     <td>Ir</td>
 </tr>
 <tr>
-    <td>brennamg</td>
+    <td>Saiprasad, Sai Aparna</td>
     <td>AgIr</td>
 </tr>
 <tr>
-    <td>brohr</td>
+    <td>Sankara Raman, Abhinav </td>
     <td>CuRu</td>
 </tr>
 <tr>
-    <td>ckirk</td>
+    <td>Sridhar, Sudiksha </td>
     <td>AuIr</td>
 </tr>
 <tr>
-    <td>colinfd</td>
+    <td>Tang, Xiaoxin </td>
     <td>Mo</td>
-</tr>
-<tr>
-    <td>cwrasman</td>
-    <td>PtRu</td>
-</tr>
-<tr>
-    <td>darab</td>
-    <td>Pd</td>
-</tr>
-<tr>
-    <td>dms002</td>
-    <td>CuRe</td>
-</tr>
-<tr>
-    <td>dpalm</td>
-    <td>CuPt</td>
-</tr>
-<tr>
-    <td>edavey</td>
-    <td>Rh</td>
-</tr>
-<tr>
-    <td>edvalle</td>
-    <td>PtIr</td>
-</tr>
-<tr>
-    <td>egoodma</td>
-    <td>AgRu</td>
-</tr>
-<tr>
-    <td>fhashemi</td>
-    <td>IrRu</td>
-</tr>
-<tr>
-    <td>jasingh</td>
-    <td>IrRe</td>
-</tr>
-<tr>
-    <td>jenniezh</td>
-    <td>PtMo</td>
-</tr>
-<tr>
-    <td>jgauth32</td>
-    <td>AgPt</td>
-</tr>
-<tr>
-    <td>jgbaker</td>
-    <td>Cu</td>
-</tr>
-<tr>
-    <td>jlin9</td>
-    <td>AuRe</td>
-</tr>
-<tr>
-    <td>jlsnider</td>
-    <td>PdRe</td>
-</tr>
-<tr>
-    <td>joelsan</td>
-    <td>CuRh</td>
-</tr>
-<tr>
-    <td>joelschn</td>
-    <td>PdIr</td>
-</tr>
-<tr>
-    <td>jschwal2</td>
-    <td>PdRu</td>
-</tr>
-<tr>
-    <td>kjhou</td>
-    <td>AgMo</td>
-</tr>
-<tr>
-    <td>mackanic</td>
-    <td>AuRh</td>
-</tr>
-<tr>
-    <td>mcconohy</td>
-    <td>AuMo</td>
-</tr>
-<tr>
-    <td>mgfields</td>
-    <td>AgPd</td>
-</tr>
-<tr>
-    <td>mikeboyd</td>
-    <td>Ru</td>
-</tr>
-<tr>
-    <td>nahlborg</td>
-    <td>Ag</td>
-</tr>
-<tr>
-    <td>nyyang</td>
-    <td>PtRe</td>
-</tr>
-<tr>
-    <td>rbritto</td>
-    <td>Re</td>
-</tr>
-<tr>
-    <td>rkini11</td>
-    <td>AuPt</td>
-</tr>
-<tr>
-    <td>rsandbe1</td>
-    <td>CuMo</td>
-</tr>
-<tr>
-    <td>sarah16</td>
-    <td>PdPt</td>
 </tr>
 
 <tr class="last">

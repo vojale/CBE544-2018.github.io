@@ -4,7 +4,7 @@ mathjax: false
 permalink: /Project_Assignments/
 ---
 
-## Project Assignment ##
+## Project Assignment
 
 Half of the class will be working on carbide MXenes and the other half will be working on nitride MXenes. Please confirm your assignments below:
 <style>

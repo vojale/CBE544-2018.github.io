@@ -39,7 +39,7 @@ table#t01 th    {
 </style>
 <table>
 <tr>
-    <th>Systen</th>
+    <th>System</th>
     <th>Group Member</th>
 </tr>
 <tr>

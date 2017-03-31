@@ -80,7 +80,7 @@ To describe the full reaction on your catalytic system, you will need to calcula
 First, download and unarchive the files you need via:
 
 ```bash
-wget https://github.com/CBE544/CBE544.github.io/raw/master/Archive.tar
+wget https://github.com/CBE544/CBE544.github.io/raw/master/Final_Project.tar.gz
 tar -zxvf Archive.tar
 ```
 

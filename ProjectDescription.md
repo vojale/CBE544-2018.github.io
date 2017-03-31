@@ -67,11 +67,14 @@ Your goals for the project will be to:
 
 ## Calculations ##
 
-For the Final Project, create a `CBE544Project` folder in your `$SCRATCH` directory by running:
+For the Final Project, create a `FinalProj_M2X` folder (M2X is the material you are assigned, please check [Assignment](https://cbe544.github.io/Project_Assignments/)) in your `CBE544` directory. For example, if you are assignemnt with Mo2C, please run the following command to create the directories: 
 
 ```bash
-mkdir $SCRATCH/CHE444Project/
+cdw
+cd CBE544
+mkdir FinalProj_Mo2C 
 ```
+Please change Mo2C in the above command to the one you are assgined. 
 
 You may run the exercises in any directory (as long as it is under `$SCRATCH`), but keep all the final files for the project organized.
 
@@ -91,39 +94,43 @@ In summary:
 1. Structural relaxations on both the bare MXene and the two functionalized MXenes; that is, O-terminated and H-terminated. [Project Part 1](../ASE/Getting_Started)
 2. Adsorption energies for the intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*). Check all possible sites in order to determine optimal adsorption configurations. [Project Part 2](../ASE/Adsorption)
 3. Energy diagrams for the overall reaction.
-4. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)
-
-Once you have finished the required calculations, you are free to explore other features of the reaction as you see fit.
+<!--4. Calculation of the reaction rate and also a free energy diagram with some temperature and pressure dependence. [Project Part 3](../ASE/Transition_States)-->
 
 **IMPORTANT:**
 
 When you have finished all your calculations. Confirm that your results are organized in the following way:
 
 ```bash
-../CBE544Project/bare/
-../CBE544Project/bare/Adsorption/
-../CBE544Project/bare/Adsorption/N/
-../CBE544Project/bare/Adsorption/N/config
-../CBE544Project/bare/Adsorption/NH/
-../CBE544Project/bare/Adsorption/NH/config
+$WORK/CBE544/FinalProj_M2X/bare/
+$WORK/CBE544/FinalProj_M2X/bare/cleansur/
+$WORK/CBE544/FinalProj_M2X/bare/Adsorption/
+$WORK/CBE544/FinalProj_M2X/bare/Adsorption/N/
+$WORK/CBE544/FinalProj_M2X/bare/Adsorption/N/config
+$WORK/CBE544/FinalProj_M2X/bare/Adsorption/NH/
+$WORK/CBE544/FinalProj_M2X/bare/Adsorption/NH/config
 ...
-../CBE544Project/O-term/
-../CBE544Project/O-term/Adsorption/
-../CBE544Project/O-term/Adsorption/N/
-../CBE544Project/O-term/Adsorption/N/config
-../CBE544Project/O-term/Adsorption/NH/
-../CBE544Project/O-term/Adsorption/NH/config
+$WORK/CBE544/FinalProj_M2X/O-term/
+$WORK/CBE544/FinalProj_M2X/O-term/cleansur/
+$WORK/CBE544/FinalProj_M2X/O-term/Adsorption/
+$WORK/CBE544/FinalProj_M2X/O-term/Adsorption/N/
+$WORK/CBE544/FinalProj_M2X/O-term/Adsorption/N/config
+$WORK/CBE544/FinalProj_M2X/O-term/Adsorption/NH/
+$WORK/CBE544/FinalProj_M2X/O-term/Adsorption/NH/config
 ...
-../CBE544Project/H-term/
-../CBE544Project/H-term/Adsorption/
-../CBE544Project/H-term/Adsorption/N/
-../CBE544Project/H-term/Adsorption/N/config
-../CBE544Project/H-term/Adsorption/NH/
-../CBE544Project/H-term/Adsorption/NH/config
+$WORK/CBE544/FinalProj_M2X/H-term/
+$WORK/CBE544/FinalProj_M2X/H-term/cleansur/
+$WORK/CBE544/FinalProj_M2X/H-term/Adsorption/
+$WORK/CBE544/FinalProj_M2X/H-term/Adsorption/N/
+$WORK/CBE544/FinalProj_M2X/H-term/Adsorption/N/config
+$WORK/CBE544/FinalProj_M2X/H-term/Adsorption/NH/
+$WORK/CBE544/FinalProj_M2X/H-term/Adsorption/NH/config
 ...
 ```
 
-where `CBE544Project` is your **project directory**. You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.
+where `CBE544Project` is your **project directory**. You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory.
+
+
+<!--Run the following to copy all your files into the shared course directory, so your classmates may access the results.
 
 On Sherlock, from your **project directory**, run:
 
@@ -132,7 +139,8 @@ On Sherlock, from your **project directory**, run:
 ```
 
 <a name='analysis'></a>
-
+-->
+<!--
 ## Analysis ##
 
 Your analysis should include the following:
@@ -197,6 +205,4 @@ At a minimum you should accomplish the following:
     2. Kinetic rate analysis
 6. Report (3~5 pages maximum)
 
-Email your final report as a PDF document to:
-
-`ctsai89@stanford.edu, aayush@stanford.edu, shaama@stanford.edu, ambarish@stanford.edu`
+-->

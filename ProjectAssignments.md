@@ -39,19 +39,19 @@ table#t01 th    {
 </style>
 <table>
 <tr>
-    <th>PennKey</th>
+    <th>Name</th>
     <th>???</th>
     <th>System</th>
 </tr>
 <tr>
     <td>aasundi</td>
     <td>CEES</td>
-    <td>Au</td>
+    <td>Ti2C</td>
 </tr>
 <tr>
     <td>afk</td>
     <td>CEES</td>
-    <td>AuPd</td>
+    <td>Ti2N</td>
 </tr>
 <tr>
     <td>aholm</td>

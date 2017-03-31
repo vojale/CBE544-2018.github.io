@@ -14,12 +14,12 @@ permalink: /Project/
 7. [Summary of Requirements](#reqs)
 
 
-For the course project, you will be studying thermo-chemical ammonia synthesis on metallic clusters and surfaces. Each student will be assigned one metal or bimetallic alloy. The due date is <font color="red">3/13 at 11:59 PM (hard deadline)</font>.
+For the course project, you will be studying thermo-chemical ammonia synthesis on 2D MXenes. Each student will be assigned one MXene either a carbide or a nitride with the chemical formula M2X. The students will perform calculations individually but will prepare a report in groups of two (see list of Assigned Projects). The due date is <font color="red">5/1 at 5:00 PM (hard deadline)</font>.
 
-Turn in your final report by emailing a PDF file to all TA's:
+Turn in your final report by emailing a PDF file to:
 
 ```
-ctsai89@stanford.edu, aayush@stanford.edu, shaama@stanford.edu, ambarish@stanford.edu
+alevoj@seas.upenn.edu, liangzha@seas.upenn.edu
 ```
 
 <a name='intro'></a>
@@ -55,27 +55,27 @@ Due to the high operating pressures and temperatures required for this reaction,
 <center><img src="../Images/N2_volcano.png" alt="N2 volcano" style="width: 400px;"/>
 <br>Filled contour plot for the turnover frequencies (Singh et. al. (2016))</center>
 
-We will be exploring 13-atom metal clusters as a system where such configurations might be found.
+We will be exploring 2D MXenes where such configurations might be found. 
 
-Your goals for the project will be to: (1) explore this reaction to find unique adsorption configurations where the dissociation energy leads to a more favorable transition state energy, and (2) explore additional relations between the reaction intermediates in the pathway. You will be studying 13-atom metal clusters (M<sub>13</sub>) consisting of either pure metals or binary alloys. 
+Your goals for the project will be to: 
+(1) explore this reaction to find unique adsorption configurations and possibly more favorable thermodynamics,
+(2) explore if the theormodynamics can be changed with functionalization of the MXenes,
+(3) explore relations between the reaction intermediates in the pathway,
+(4) compare 
+
+You will be studying MXenes (M<sub>2</sub>X) with X = C or N. 
 
 <a name='calcs'></a>
 
 ## Calculations ##
 
-For Sherlock, create a `CHE444Project` folder in your `$SCRATCH` directory by running:
+For the Final Project, create a `CBE544Project` folder in your `$SCRATCH` directory by running:
 
 ```bash
 mkdir $SCRATCH/CHE444Project/
 ```
 
-for CEES:
-
-```bash
-mkdir /data/cees/$USER/CHE444Project
-```
-
-You may run the exercises in any directory (as long as it is under `$SCRATCH` for Sherlock and `/data/cees/$USER` for CEES), but keep all the final files for the project organized.
+You may run the exercises in any directory (as long as it is under `$SCRATCH`), but keep all the final files for the project organized.
 
 For the first step, N<sub>2</sub> → 2N\*, you *are required* to calculate the transition state. To do this, you will need to calculate the final adsorbed state with two nitrogen atoms (2N\*).
 
@@ -95,26 +95,23 @@ Once you have finished the required calculations, you are free to explore other 
 When you have finished all your calculations. Confirm that your results are organized in the following way:
 
 ```bash
-../CHE444Project/Adsorption/
-../CHE444Project/Adsorption/Surface/
-../CHE444Project/Adsorption/Surface/2N/
-../CHE444Project/Adsorption/Surface/2N/config1
+../CBE544Project/Adsorption/
+../CBE544Project/Adsorption/Surface/
+../CBE544Project/Adsorption/Surface/2N/
+../CBE544Project/Adsorption/Surface/2N/config1
 ...
-../CHE444Project/Adsorption/Cluster/
-../CHE444Project/Adsorption/Cluster/2N/
-../CHE444Project/Adsorption/Cluster/NH/
-../CHE444Project/Adsorption/Cluster/NH/config1
-../CHE444Project/Adsorption/Cluster/NH/config2
+../CBE544Project/Adsorption/Cluster/
+../CBE544Project/Adsorption/Cluster/2N/
+../CBE544Project/Adsorption/Cluster/NH/
+../CBE544Project/Adsorption/Cluster/NH/config1
+../CBE544Project/Adsorption/Cluster/NH/config2
 ...
-../CHE444Project/TransitionStates/Cluster/2N_to_N2/
-../CHE444Project/TransitionStates/Cluster/2N_to_N2/config1
-...
-../CHE444Project/Vibrations/N/
-../CHE444Project/Vibrations/2N/
+../CBE444Project/Vibrations/N/
+../CBE444Project/Vibrations/2N/
 ...
 ```
 
-where `CHEMENG444Project` is your **project directory**. You should rename `config1` to something that describes the binding configuration, such as `BrBr` for two bridging sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.
+where `CBE544Project` is your **project directory**. You should rename `config1` to something that describes the binding configuration, such as `BrBr` for two bridging sites. You should have one calculation per directory. Run the following to copy all your files into the shared course directory, so your classmates may access the results.
 
 On Sherlock, from your **project directory**, run:
 

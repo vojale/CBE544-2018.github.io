@@ -129,6 +129,18 @@ $WORK/CBE544/FinalProj_M2X/H-term/Adsorption/NH/config
 
 You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory.
 
+##Access Your Teammate's directory:
+The following path contains the paths to your teammate's directory, 
+```bash
+/home1/03672/tg829713/lnk_CBE544
+```
+
+You can create a link of the above path so that you can easily access it in the future. Be sure to change M2X to the material you are assigned
+
+```bash
+ln -s /home1/03672/tg829713/lnk_CBE544/M2X FPteam
+```
+
 
 <!--Run the following to copy all your files into the shared course directory, so your classmates may access the results.
 

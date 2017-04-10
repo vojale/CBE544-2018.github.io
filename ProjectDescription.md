@@ -149,6 +149,22 @@ You can create a link of the above path so that you can easily access it in the 
 ln -s /home1/03672/tg829713/lnk_CBE544/M2X FPteam
 ```
 
+<a name='analysis'></a>
+
+## Analysis ##
+Your analysis abd final report should include the following:
+
+1. Structures of bare MXenes and the H- and O-terminated MXenes.
+2. Adsorption energies and structures for all intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*) on the bare and the two functionalized Mxenes. Determine what is the optimal reaction site for each system. Discussion of the optimal binding configurations on the surface.
+3. Energy diagrams for the overall reaction for bare, O- and H-terminated Mxenes. Preferably combined in one figure for easy comparison. Comparison between the different systems.
+4. Establish scaling relations between intermediates.
+5. Calculate the reaction rate of the systems you've studied with certain assumptions
+    a. Single active site model
+    b. N<sub>2</sub> dissociation is rate determining step
+    c. TS of NH<sub>2</sub> follows the universal BEP relation
+    d. Use the following total energies for N2, H2, ZPE, vibrational corrections will be provided
+
+
 <a name='report'></a>
 
 ## Final Report ##
@@ -162,30 +178,9 @@ The final report should be in the form of a 3-5 pages long mini paper including 
 
 
 
-<!--Run the following to copy all your files into the shared course directory, so your classmates may access the results.
-
-On Sherlock, from your **project directory**, run:
-
-```bash
-/scratch/PI/suncat/chemeng444_2016/submit
-```
-
-<a name='analysis'></a>
--->
 <!--
-## Analysis ##
 
-Your analysis should include the following:
 
-* Discussion of the optimal binding configurations on the surface
-* Comparison between the (111) surface and the M<sub>13</sub> cluster
-* Analysis of rate as a function of the temperature
-
-Beyond these points, you may discuss anything you find interesting. Here are some ideas:
-
-* Do the reaction intermediates (adsorbates) show the same dependence on surface site or surface termination?
-* What are other factors that can affect adsorbate-metal interaction?
-* How important is the coordination number of the metal? Compare the metal cluster to the metal surface.
 
 You are welcome to share data amongst your peers to discuss broader trends. 
 
@@ -203,9 +198,6 @@ You are welcome to share data amongst your peers to discuss broader trends.
 <a name='reqs'></a>
 
 ## Requirements ##
-1. Show energy diagram for bare MXene on Wed April 12 on a Power Point slide (Each group)
-2. Presentation date Fri Apr 21 (Each group 15 min including presentation and Q&A. Note: Total 90 mins)
-3. Hand in a final written report: Mon 1 May at 5:00 PM
 
 At a minimum you should accomplish the following:
 

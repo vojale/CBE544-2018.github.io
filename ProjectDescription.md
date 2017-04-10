@@ -16,7 +16,7 @@ permalink: /Project/
 
 For the Final Project, you will be studying thermo-chemical ammonia synthesis on 2D MXenes (M<sub>2</sub>X) with X = C or N. Each student will be assigned a MXene to work on either a carbide or a nitride (see list of Assigned Projects). The students will work in groups of two on the same MXene to perform calculations individually, however, complementing each other. Each pair of students will present their results in class that will be critiqued by another group of two. Finally, these four students will jointly write a final report on the combined data. The due date for the final written report is <font color="red">5/1 at 5:00 PM (hard deadline)</font>.
 
-Please make use of the [Piazza](https://piazza.com/) page for troubleshooting and for sharing results.
+Please make use of the [Piazza](https://piazza.com/) page for troubleshooting, discussions and for sharing results.
 
 Turn in your final report by emailing a PDF file to:
 
@@ -143,6 +143,17 @@ You can create a link of the above path so that you can easily access it in the 
 ln -s /home1/03672/tg829713/lnk_CBE544/M2X FPteam
 ```
 
+<a name='report'></a>
+
+## Report ##
+
+The final report should be in the form of a 3-5 pages long mini paper including figures and tables. One report for each group of 4 people formed according to the metal of the Mxene. Please be succinct and organize it in the following way:
+
+* Introduction (brief) - don't write too much
+* Calculation details
+* Results and discussion
+* Conclusion (brief)
+
 
 <!--Run the following to copy all your files into the shared course directory, so your classmates may access the results.
 
@@ -172,28 +183,6 @@ Beyond these points, you may discuss anything you find interesting. Here are som
 You are welcome to share data amongst your peers to discuss broader trends. 
 
 **If you need the energy of the fixed clusters, they are available [here](../Fixed_Lattice_Clusters/energies.txt).**
-
-<a name='report'></a>
-
-## Report ##
-
-Your report should be between 3 to 5 pages long including figures and tables. Please be succinct and organize it in the following way:
-
-* Introduction (brief) - don't write too much
-* Calculation details
-* Results and discussion
-* Conclusion (brief)
-
-<a name='paper'></a>
-
-## Research Paper ##
-
-We expect that your results will form the basis of a manuscript that we will be putting together as a class. For previous class papers:
-
-* [(2011) Finite-Size Effects in O and CO Adsorption for the Late Transition Metals, *Topics in Catalysis*](http://dx.doi.org/10.1007/s11244-012-9908-x)
-* [(2015) Direct Water Decomposition on Transition Metal Surfaces: Structural Dependence and Catalytic Screening, *Catalysis Letters*](http://dx.doi.org/10.1007/s10562-016-1708-7).
- 
-Notice how much the class size has grown!
 
 <a name='grading'></a>
 

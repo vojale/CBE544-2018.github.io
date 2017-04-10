@@ -8,9 +8,8 @@ permalink: /Project/
 1. [Introduction](#intro)
 2. [Deadlines](#deadlines)
 3. [Calculations](#calcs)
-3. [Analysis](#analysis)
-4. [Final Report](#report)
-7. [Summary of Requirements](#reqs)
+4. [Analysis](#analysis)
+5. [Final Report](#report)
 
 
 For the Final Project, you will be studying thermo-chemical ammonia synthesis on 2D MXenes (M<sub>2</sub>X) with X = C or N. Each student will be assigned a MXene to work on either a carbide or a nitride (see list of Assigned Projects). The students will work in groups of two on the same MXene to perform calculations individually, however, complementing each other. Each pair of students will present their results in class that will be critiqued by another group of two. Finally, these four students will jointly write a final report on the combined data. The due date for the final written report is <font color="red">5/1 at 5:00 PM (hard deadline)</font>.
@@ -159,10 +158,14 @@ Your analysis abd final report should include the following:
 3. Energy diagrams for the overall reaction for bare, O- and H-terminated Mxenes. Preferably combined in one figure for easy comparison. Comparison between the different systems.
 4. Establish scaling relations between intermediates.
 5. Calculate the reaction rate of the systems you've studied with certain assumptions
+
     a. Single active site model
+    
     b. N<sub>2</sub> dissociation is rate determining step
+    
     c. TS of NH<sub>2</sub> follows the universal BEP relation
-    d. Use the following total energies for N2, H2, ZPE, vibrational corrections will be provided
+
+    d. Use the following total energies for N2, H2, and NH3
 
 
 <a name='report'></a>

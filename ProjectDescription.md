@@ -157,7 +157,7 @@ Your analysis abd final report should include the following:
 2. Adsorption energies and structures for all intermediates in the adsorbed state (N\*, NH\*, NH<sub>2</sub>\*, NH<sub>3</sub>\*, H\*) on the bare and the two functionalized Mxenes. Determine what is the optimal reaction site for each system. Discussion of the optimal binding configurations on the surface.
 3. Energy diagrams for the overall reaction for bare, O- and H-terminated Mxenes. Preferably combined in one figure for easy comparison. Comparison between the different systems.
 4. Establish scaling relations between intermediates.
-5. Calculate the reaction rate of the systems you've studied with certain assumptions
+5. Calculate the reaction rate of the systems you've studied with using the following assumptions:
 
     a. Single active site model
     

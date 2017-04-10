@@ -6,11 +6,10 @@ permalink: /Project/
 
 ## Course Project ##
 1. [Introduction](#intro)
+2. [Deadlines](#deadlines)
 3. [Calculations](#calcs)
 3. [Analysis](#analysis)
-
 4. [Final Report](#report)
-6. [Grading](#grading)
 7. [Summary of Requirements](#reqs)
 
 

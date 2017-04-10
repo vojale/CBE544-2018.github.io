@@ -8,8 +8,8 @@ permalink: /Project/
 1. [Introduction](#intro)
 3. [Calculations](#calcs)
 3. [Analysis](#analysis)
-4. [Report](#report)
-5. [Research Paper](#paper)
+
+4. [Final Report](#report)
 6. [Grading](#grading)
 7. [Summary of Requirements](#reqs)
 
@@ -64,6 +64,13 @@ Your goals for the project will be to:
 (2) explore if the theormodynamics can be changed with functionalization of the MXenes,
 (3) explore relations between the reaction intermediates in the pathway,
 (4) compare the chemsitry of the carbide and nitride MXenes.
+
+<a name='deadlines'></a>
+
+## Deadlines ##
+1. Show energy diagram for bare MXene on Wed April 12 on a Power Point slide (Each group)
+2. Presentation date Fri Apr 21 (Each group 15 min including presentation and Q&A. Note: Total 90 mins)
+3. Hand in a final written report: Mon 1 May at 5:00 PM
 
 <a name='calcs'></a>
 
@@ -145,7 +152,7 @@ ln -s /home1/03672/tg829713/lnk_CBE544/M2X FPteam
 
 <a name='report'></a>
 
-## Report ##
+## Final Report ##
 
 The final report should be in the form of a 3-5 pages long mini paper including figures and tables. One report for each group of 4 people formed according to the metal of the Mxene. Please be succinct and organize it in the following way:
 
@@ -153,6 +160,7 @@ The final report should be in the form of a 3-5 pages long mini paper including 
 * Calculation details
 * Results and discussion
 * Conclusion (brief)
+
 
 
 <!--Run the following to copy all your files into the shared course directory, so your classmates may access the results.
@@ -195,7 +203,10 @@ You are welcome to share data amongst your peers to discuss broader trends.
 
 <a name='reqs'></a>
 
-## Summary of Requirements ##
+## Requirements ##
+1. Show energy diagram for bare MXene on Wed April 12 on a Power Point slide (Each group)
+2. Presentation date Fri Apr 21 (Each group 15 min including presentation and Q&A. Note: Total 90 mins)
+3. Hand in a final written report: Mon 1 May at 5:00 PM
 
 At a minimum you should accomplish the following:
 

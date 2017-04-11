@@ -136,7 +136,7 @@ $WORK/CBE544/FinalProj_M2X/H-term/Adsorption/NH/config
 
 You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory.
 
-##Access Your Teammate's directory:
+## Access Your Teammate's directory ##:
 The following path contains the paths to your teammate's directory, 
 ```bash
 /home1/03672/tg829713/lnk_CBE544
@@ -165,7 +165,12 @@ Your analysis abd final report should include the following:
     
     c. TS of NH<sub>2</sub> follows the universal BEP relation
 
-    d. Use the following total energies for N2, H2, and NH3
+    d. Use the following total energies for N2, H2, and NH3:
+    ```
+        N2: -556.55 eV
+        H2: -32.94 eV 
+        NH3: -327.72 eV
+    ```
 
 
 <a name='report'></a>

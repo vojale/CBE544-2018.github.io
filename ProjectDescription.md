@@ -167,7 +167,7 @@ Your analysis abd final report should include the following:
 
     d. Use the following total energies for N2, H2, and NH3:
     ```
-        N2: -556.55 eV
+        N2:  -555.10 eV
         H2: -32.94 eV 
         NH3: -327.72 eV
     ```

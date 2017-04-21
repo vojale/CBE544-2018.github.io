@@ -163,7 +163,7 @@ Your analysis abd final report should include the following:
     
     b. N<sub>2</sub> dissociation is rate determining step
     
-    c. TS of NH<sub>2</sub> follows the universal BEP relation
+    c. TS of N<sub>2</sub> dissociation follows the universal BEP relation
 
     d. Use the following total energies for N2, H2, and NH3:
     ```

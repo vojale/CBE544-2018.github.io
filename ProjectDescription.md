@@ -163,7 +163,7 @@ Your analysis abd final report should include the following:
     
     b. N<sub>2</sub> dissociation is rate determining step
     
-    c. TS of N<sub>2</sub> dissociation follows the universal BEP relation
+    c. TS of N<sub>2</sub> dissociation follows the universal BEP relation (see Eqs. on page 93 in "Fundamental Concepts in Heterogenous Catalysis" by Nørskov et al.) for either close-packed or stepped surfaces. Please motivate your choice(s) for the different systems.
 
     d. Use the following total energies for N2, H2, and NH3:
     ```
@@ -171,7 +171,9 @@ Your analysis abd final report should include the following:
         H2: -32.94 eV 
         NH3: -327.72 eV
     ```
-
+    e. The ZPE correction should be assumed to be negligable
+    
+    d. Entropies of gas phase molecules should be taken as the experimental values from NIST.
 
 <a name='report'></a>
 

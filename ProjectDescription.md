@@ -171,7 +171,7 @@ Your analysis abd final report should include the following:
         H2: -32.94 eV 
         NH3: -327.72 eV
     ```
-    e. The ZPE correction should be assumed to be negligable
+    e. The ZPE corrections should be assumed to be negligable
     
     d. Entropies of gas phase molecules should be taken as the experimental values from NIST.
 

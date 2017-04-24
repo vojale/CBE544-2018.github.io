@@ -173,7 +173,7 @@ Your analysis abd final report should include the following:
     ```
     e. The ZPE corrections should be assumed to be negligable
     
-    d. Entropies of gas phase molecules should be taken as the experimental values from NIST.
+    d. Entropies of gas phase molecules should be taken as the experimental values from [NIST](http://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1). Please keep in mind that entropy is a function of temperature. 
 
 <a name='report'></a>
 

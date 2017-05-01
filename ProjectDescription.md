@@ -136,7 +136,7 @@ $WORK/CBE544/FinalProj_M2X/H-term/Adsorption/NH/config
 
 You should rename `config` to describe the binding configuration, such as `fcc`, `hcc`, `top`, `bridge` sites. You should have one calculation per directory.
 
-## Access Your Teammate's directory ##:
+** Access Your Teammate's directory **:
 The following path contains the paths to your teammate's directory, 
 ```bash
 /home1/03672/tg829713/lnk_CBE544
@@ -185,6 +185,13 @@ The final report should be in the form of a 3-5 pages long mini paper including 
 * Calculation details
 * Results and discussion
 * Conclusion (brief)
+
+** Archieve Calculations **
+Under your final project directory, please create a folder named `opt-sites`, and then put everything there in an organized way: For each stable sites, please create a folder `X-Y-Z`, and put corresponding `.traj` and `ll_out` (use the last one if you have multiple runs) in the folder. 
+
+X is termination: `bare`, `H`, `O`
+Y is adsorbate: `H`, `N`, `NH`, `NH2`, `NH3`
+Z is adsorption site of the final geometry: `hcp`, `top`, `fcc`
 
 
 

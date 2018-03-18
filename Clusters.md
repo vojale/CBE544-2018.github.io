@@ -54,18 +54,19 @@ ____
 
 ## Logging onto the Clusters
 
-For the [**Stampede**](https://www.tacc.utexas.edu/stampede/) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede).
+For the [**Stampede2**](https://www.tacc.utexas.edu/systems/stampede2) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede2).
 
-login with your Stampede username (most probably start with ```tgxxxxxx```, check your account [here](https://www.xsede.org/group/xup/accounts))and password (you will aslo be asked for Mulit-factor Authorization).
+login with your Stampede2 username (most probably starts with ```tgxxxxxx```, check your account [here](https://www.xsede.org/group/xup/accounts))and password (you will also be asked for Mulit-factor Authorization).
 
 Follow the instructions below for your system:
 
 ### Mac OSX
 
 Open "Applications-> Utilities -> Terminal" or "Command+Space" to search Terminal using "spotlight search"
-In a terminal:
+
+In a terminal type:
 ```bash
-ssh -X username@stampede.tacc.utexas.edu
+ssh -X username@stampede2.tacc.utexas.edu
 ```
 
 ### Windows 
@@ -73,18 +74,18 @@ Launch Xming. You will always need to have this open in order to forward graphic
 
 Start PuTTY, and:
 
-* “Session” → “Host Name” `username@stampede.tacc.utexas.edu` for **Stampede**
+* “Session” → “Host Name” `username@stampede2.tacc.utexas.edu` for **Stampede2**
 * “Connection” → “SSH” → “X11” check “Enable X11 forwarding”
 * Back in “Session”, you can **save these settings for next time**.
 
-You can start putty several times, if you need several terminal windows; only one instance of Xming needed.
+You can start PuTTY several times, if you need several terminal windows; only one instance of Xming needed.
 
 
 ### Linux ###
 
 In a terminal:
 ```bash
-ssh -X username@stampede.tacc.utexas.edu
+ssh -X username@stampede2.tacc.utexas.edu
 ```
 ____
 
@@ -99,7 +100,7 @@ cp /home1/03672/tg829713/vojgroup/bash_script/bashrc_copy ~/.bashrc
 source ~/.bashrc
 ```
 
-This will enable you to run specific software on the Stampede cluster, including the ASE interface to Quantum ESPRESSO.
+This will enable you to run specific software on the Stampede2 cluster, including the ASE interface to Quantum ESPRESSO.
 
 There are two file partitions, the `home` and the `work` partition. Go ahead and make a symbolic link to the `work` partition using:
 

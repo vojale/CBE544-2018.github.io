@@ -13,7 +13,7 @@ ____
 
 ## Getting Started with DFT Calculations ##
 
-In the first exercise, we will be studying perovskite oxides and how to determine their lattice constants, followed by generating starting structures for the different crystal facets of the oxide. For Homework 5, everyone will be studying the same system (SrTiO<sub>3</sub>). For the Final Project, you will use the same perovskite but with different facets (e.g.,(110),(111) etc.).
+In the first exercise, we will be studying perovskite oxides and how to determine their lattice constants, followed by generating starting structures for the different crystal facets of the oxide. For Homework 5, everyone will be studying the same system SrTiO<sub>3</sub>. For the Final Project, you will use the same perovskite but with different facets (e.g.,(110),(111) etc.).
 
 ## Contents ##
 

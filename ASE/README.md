@@ -21,7 +21,7 @@ ____
 <a name='background'></a>
 
 ### Atomic Simulation Environment (ASE) ###
-In this class, we will use the [Quantum ESPRESSO](http://www.quantum-espresso.org) calculator as implemented in the Atomic Simulation Envrionment (ASE) for density functional theory (DFT) calculations. ASE provides Python modules for manipulating atoms, performing calculations, and analyzing and visualizing the results. ASE scripts are simply regular Python scripts that incorporate the ASE modules. For detailed documentation, refer to the official [ASE website](http://wiki.fysik.dtu.dk/ase/index.html). We will be demonstrating all the features you will need to use on the project website, but you may want to explore additional functionality on your own.
+In this class, we will use the [Quantum ESPRESSO](http://www.quantum-espresso.org) calculator as implemented in the Atomic Simulation Envrionment (ASE) for density functional theory (DFT) calculations. ASE provides Python modules for manipulating atoms, performing calculations, and analyzing and visualizing the results. ASE scripts are simply regular Python scripts that incorporate the ASE modules. For detailed documentation, refer to the official [ASE website](http://wiki.fysik.dtu.dk/ase/index.html). We will be demonstrating all the features you will need to use, on the project website, but you may want to explore additional functionality on your own.
 
 Here is an example of a few commonly used modules for a calculation and how you would use them in your Python scripts:
 
@@ -48,7 +48,7 @@ ASE supports a variety of file formats. More information about ASE can be found 
 
 As mentioned above, you can use the graphical user interface to view atomic structures. It is also convenient for adding or manipulating atoms inside your system. Read all the details [here](http://wiki.fysik.dtu.dk/ase/ase/gui/gui.html).
 
-Log on to Stampede, download an example and take a look (the other files will all be used in the remainder of these examples):
+Log on to Stampede2, download an example and take a look (the other files will all be used in the remainder of these examples):
 
 ```bash
 wget https://cbe544.github.io/ASE/archive.tar.gz

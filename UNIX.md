@@ -72,7 +72,7 @@ ____
 ```bash
 mkdir <directory_name>
 ```
-Create new a new directory. 
+Create a new directory. 
 
 ____
 
@@ -172,7 +172,7 @@ There are several text editors available. Popular ones include [vim](https://www
 <a name='submitting-jobs'></a>
 
 ## Submitting Jobs
-These instructions are specific to the **Stampede** cluster. 
+These instructions are specific to the **Stampede2** cluster. 
 
 ```bash
 sbatch <script_file>

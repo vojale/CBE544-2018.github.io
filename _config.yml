@@ -2,7 +2,7 @@
 title: CBE544 2018
 subtitle: 
 url: "https://CBE544-2018.github.io"
-baseurl: ""
+baseurl: "/CBE544-2018.github.io"
 
 # Build settings
 permalink: pretty

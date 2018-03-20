@@ -56,7 +56,7 @@ ____
 
 For the [**Stampede2**](https://www.tacc.utexas.edu/systems/stampede2) cluster, make sure to read through the User Guide [here](https://portal.tacc.utexas.edu/user-guides/stampede2).
 
-login with your Stampede2 username (most probably starts with ```tgxxxxxx```, check your account [here](https://www.xsede.org/group/xup/accounts))and password (you will also be asked for Mulit-factor Authorization).
+login with your Stampede2 username (same as the TACC username, check your account [here](https://portal.tacc.utexas.edu/))and password (you will also be asked for Mulit-factor Authorization).
 
 Follow the instructions below for your system:
 

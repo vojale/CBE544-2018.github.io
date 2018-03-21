@@ -13,14 +13,14 @@ ____
 
 ## Getting Started with DFT Calculations ##
 
-In the first exercise, we will be studying perovskite oxides and how to determine their lattice constants, followed by generating starting structures for the different crystal facets of the oxide. For Homework 5, everyone will be studying the same system SrTiO<sub>3</sub>. For the Final Project, you will use the same perovskite but with different facets (e.g.,(110),(111) etc.).
+In the first exercise, we will be studying perovskite oxides and how to determine their lattice constants, followed by surface relaxation of the (001) surface of the perovskite. For Homework 5, everyone will be studying the same system (001) SrTiO<sub>3</sub>. For the Final Project, you will use the same perovskite but with different facets (e.g.,(110),(111) etc.).
 
 ## Contents ##
 
 1. [A Typical ASE Script](#a-typical-ase-script)
 2. [Lattice Constant Determination](#lattice-constant-determination)
 3. [Convergence with k-points](#convergence-with-k-points)
-4. [Facets](#next)
+4. [Relaxation](#relaxation)
 
 
 <a name='a-typical-ase-script'></a>
@@ -53,10 +53,10 @@ export OMP_NUM_THREADS=1
 python Energy.py
 ```
 
-Finally, the last line ```python Energy.py``` picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running.
+Finally, the last line ```python relax.py``` picks the script you want to run. Therefore, you need to change the name of the file depending on which script you are running. We will be using this script later in this section for performing surface relaxation calculations on the (001) SrTiO<sub>3</sub> perovskite.
 
 
-Let's look at how a typical ASE script is written. Open the [`Energy.py`](energy.py) script. We import all the relevant ASE modules in for this calculation
+Let's look at how a typical ASE script is written. Open the [`relax.py`](relax.py) script. We import all the relevant ASE modules in for this calculation
 
 ```python
 from espresso import espresso
@@ -96,23 +96,20 @@ calc = espresso(pw=700,             #plane-wave cutoff
 
 ```
 
-Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, the energy calculation is ran, and the total energy of the system is output in the log file (defined in the `spede_esp.sub` file above). 
+Finally, the Quantum ESPRESSO calculator is attached to the `slab` Atoms object, the relaxation calculation is run, and the total energy of the system is output in the log file. 
 
-To submit the job, use:
+To submit any job on Stampede2, use:
 
 ```bash
 sbatch -J $PWD spede_esp.sub
 
 ```
-The `-J $PWD` gives the name of the job as the current directory. Make sure this calculations runs correctly before proceeding. You should get a total energy of -3353.960 eV.
-
-<a name='mxenes'></a>
 
 <a name='lattice-constant-determination'></a>
 
 #### Lattice Constant Determination ####
 
-Find the [`Lattice_Constant.py`](Lattice_Constant.py) script in the `lattice` folder. This script calculates the different energies of the system as a function of the lattice constant. Before you run this job, make sure you read the comments within to understand what it does. You will later need to modify this file for the Final Project.
+Find the [`Lattice_Constant.py`](Lattice_Constant.py) script in the `lattice` folder. This script calculates the different energies of the system as a function of the lattice constant. Before you run this job, make sure you read the comments within to understand what it does.
 
 Remember to change the script name to Lattice_Constant.py in the `spede_esp.sub` file! Submit the script by running:
 
@@ -121,19 +118,9 @@ sbatch --job-name=$PWD spede_esp.sub
 ```
 Here, `--job-name=$PWD` sets the current working directory as the job name. 
 
-The output states the energy with respect to the given lattice constant. Take this data and plot it however you choose. Fit ~5 points near the minimum of this function with a quadratic function. Then, use calculus to find the minimum energy, and thus the DFT lattice constant.
+The output states the energy with respect to the given lattice constant.
 
 **HW 5:** Plot the energies as listed above, and report the DFT lattice constant.
-
-The two-dimensional bulk modulus B describes the compressibility of a two-dimensional sheet (how difficult it is to stretch or compress). Take the lattice script given before, change the given value to the DFT lattice constant, and change the strain value to run from 0.98 to 1.02, with five steps of 0.1. Fit the energies with a quadratic function. Then, calculuate B via:
-
-$$B=S_{0}\frac{d^{2}E}{dS^{2}}$$
-
-where S is the surface area of the sheet (a variable) and S<sub>0</sub> is the true surface area. Note that in this case we are fitting the surface area S, _not_ the lattice constant! The surface area of the MXenes is given by:
-
-$$S=\frac{\sqrt{3}}{2}a^{2}$$
-
-**HW 5:** Report the two-dimensional bulk modulus of Ti<sub>2</sub>C.
 
 <a name='convergence-with-k-points'></a>
 

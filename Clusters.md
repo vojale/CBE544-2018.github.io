@@ -13,7 +13,7 @@ ____
 
 ## Logging Into the Computing Clusters
 
-Once you account on Stampede has been activated. Follow the instructions and tests to make sure everything is set up properly and functional.
+Once your account on Stampede2 has been activated, follow the instructions and tests to make sure everything is set up properly and functional.
 
 ## Contents
 1. [Installation](#installation)

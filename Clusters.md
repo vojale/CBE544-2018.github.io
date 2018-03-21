@@ -96,7 +96,7 @@ ____
 For the **first login** only, run the following command:
 
 ```bash
-cp /home1/03672/tg829713/vojgroup/bash_script/bashrc_copy ~/.bashrc 
+cp /home1/04518/tg838175/vojgroup/vojgroup/bash_script/bashrc_copy ~/.bashrc 
 source ~/.bashrc
 ```
 

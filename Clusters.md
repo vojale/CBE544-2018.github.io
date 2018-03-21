@@ -115,7 +115,7 @@ cd
 cd work
 mkdir CBE544
 chmod g+X $WORK
-chgrp -R G-818582 CBE544
+chgrp -R G-819990 CBE544
 chmod g+s CBE544
 chmod g+rX CBE544
 ```

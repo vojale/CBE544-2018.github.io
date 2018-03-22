@@ -7,7 +7,7 @@ published: true
 
 # ASE Tutorials
 1. [Introduction to ASE](../ASE/)
-2. [Getting Started with DFT Calculations](Getting_Started/)
+2. [Getting Started with DFT Calculations]()
 
 
 ____
@@ -73,4 +73,4 @@ You can repeat the slab to create a larger supercell. This is convenient for ide
 Repeating a slab
 </center>
 
-**Next**: move on to [Getting Started with DFT Calculations](Getting_Started/) when you're ready to start doing some DFT!
+**Next**: move on to [Getting Started with DFT Calculations]() when you're ready to start doing some DFT!
